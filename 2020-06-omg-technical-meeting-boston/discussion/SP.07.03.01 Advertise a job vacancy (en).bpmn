@@ -1,0 +1,3178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xmi="http://www.omg.org/XMI"
+             xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:adonis="http://www.boc-group.com"
+             xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="definition__b614b9a5-c007-41a4-95b1-6edc21b4756e"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
+             targetNamespace="http://www.boc-group.com">
+   <collaboration id="Collaboration_b614b9a5-c007-41a4-95b1-6edc21b4756e"
+                  name="SP.07.03.01 Advertise a job vacancy"
+                  isClosed="false">
+      <extensionElements>
+         <adonis:modelattributes>
+            <adonis:attribute name="A_DESCRIPTION"
+                              type="LONGSTRING"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>In this process, all activities are described how to advertise a job vacancy.</adonis:value>
+               <adonis:metavalue>`0`&lt;x&gt;`80`&lt;/x&gt;</adonis:metavalue>
+            </adonis:attribute>
+            <adonis:attribute name="A_COMPLIANCE"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_PROCESS_MANAGEMENT_MATURITY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_MONITORING_NCS"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_COMPLEXITY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v0">
+               <adonis:value>Low</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_CYCLE_TIME"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="PROCESS_TYPE"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v0">
+               <adonis:value>None</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_PREDICTABILITY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v0">
+               <adonis:value>Predictable</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_COST_EFFICIENCY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="MFB_RWF_STATE"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v5">
+               <adonis:value>Released</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_POTENTIAL_MATURITY_ANALYSIS_AS_IS_AVERAGE"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No assessment data available to calculate as-is average</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_RISK_MANAGEMENT"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_QUALITY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_BUSINSS_VALUE"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v2">
+               <adonis:value>Mission critical</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_MFB_RWF_VALID_FROM_DATE"
+                              type="UTC"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>1551394800000</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="TRIGGER"
+                              type="LONGSTRING"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>Personnel requirements for filling job vacancies.</adonis:value>
+               <adonis:metavalue>`0`&lt;x&gt;`52`&lt;/x&gt;</adonis:metavalue>
+            </adonis:attribute>
+            <adonis:attribute name="WIDTH"
+                              type="INTEGER"
+                              notebook="0"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>28650</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="GLOBAL_CHOREOGRAPHY_TASK"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_NEED_FOR_ACTION"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_CUSTOMER_SATISFACTION"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="KEY_PROCESS"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v2">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_PROCESS_FREQUENCY"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v1">
+               <adonis:value>Several times per quarter</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_MFB_RWF_RESUBMISSION_DATE"
+                              type="UTC"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>1614466800000</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_MFB_RWF_VALID_UNTIL_DATE"
+                              type="UTC"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="2">
+               <adonis:value>1617141600000</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="PROCESS_TYPE_ACCORDING_TO_ISO_9000"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v3">
+               <adonis:value>Supporting process</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_AUDITING_NCS"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="HEIGHT"
+                              type="INTEGER"
+                              notebook="0"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>8520</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="MFB_RWF_VERSION"
+                              type="STRING"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>1.00</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_IT_SUPPORT"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v4">
+               <adonis:value>No entry</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="CREATION_DATE"
+                              type="DOUBLE"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>1547821472145</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="AIM"
+                              type="LONGSTRING"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>Advertisement of a job vacancy conformable to law and company guidelines.</adonis:value>
+               <adonis:metavalue>`0`&lt;x&gt;`76`&lt;/x&gt;</adonis:metavalue>
+            </adonis:attribute>
+            <adonis:attribute name="EXTERNAL_PROCESS"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="RESULT"
+                              type="LONGSTRING"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0">
+               <adonis:value>The advertisement for the job vacancy has been reviewed and published according to the guidelines.</adonis:value>
+               <adonis:metavalue>`0`&lt;x&gt;`101`&lt;/x&gt;</adonis:metavalue>
+            </adonis:attribute>
+            <adonis:relation id="_4748b211-0b61-4dda-9c89-c447e9196b38"
+                             repoinstance="{043110c3-df2c-4fd8-ada2-a558b50021a2}"
+                             class="RC_OWNER"
+                             notebook="1">
+               <adonis:endpoints>
+                  <adonis:endpoint name="TO"
+                                   type="repoinstance"
+                                   id="{39ed86da-4e1e-49e3-a113-4474d1549c39}">
+                     <adonis:target id="_51197ffc-c789-466a-81f2-629405f284ff"
+                                    class="USER"
+                                    info="Power Adonis (ado)"
+                                    sourcelang="en"/>
+                  </adonis:endpoint>
+                  <adonis:endpoint name="FROM"
+                                   type="model"
+                                   id="{46501fcb-7118-4c3f-8cc6-cb10fe4ae8b5}">
+                     <adonis:target id="process_b614b9a5-c007-41a4-95b1-6edc21b4756e"
+                                    class="MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20"/>
+                  </adonis:endpoint>
+               </adonis:endpoints>
+            </adonis:relation>
+            <adonis:relation id="_bb548c11-f306-434d-95a9-7312bbf35694"
+                             repoinstance="{10042876-ac85-42f6-bedf-9abd43db178b}"
+                             class="RC_ANALYST"
+                             notebook="1">
+               <adonis:endpoints>
+                  <adonis:endpoint name="TO"
+                                   type="repoinstance"
+                                   id="{57b7b81c-949b-4d99-b6b9-88b7f05f1d4a}">
+                     <adonis:target id="_51197ffc-c789-466a-81f2-629405f284ff"
+                                    class="USER"
+                                    info="Power Adonis (ado)"
+                                    sourcelang="en"/>
+                  </adonis:endpoint>
+                  <adonis:endpoint name="FROM"
+                                   type="model"
+                                   id="{f498404e-39de-4717-b704-2c8ee44f70ba}">
+                     <adonis:target id="process_b614b9a5-c007-41a4-95b1-6edc21b4756e"
+                                    class="MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20"/>
+                  </adonis:endpoint>
+               </adonis:endpoints>
+            </adonis:relation>
+            <adonis:record name="MFB_RWF_HISTORY">
+               <adonis:row id="{c79f965c-98f1-47b7-93d7-a74c4e62f6c0}" creationtime="1548070198">
+                  <adonis:attribute id="{0819e32a-626f-4377-9921-4b35b1d39439}"
+                                    name="col_{667b19e2-f759-4b37-9e6d-a3b3d78e8ab6}"
+                                    type="LONGSTRING"
+                                    sourcelang="en"
+                                    novalue="0">New model has been created.</adonis:attribute>
+                  <adonis:attribute id="{397c980a-1ed6-432b-be13-23e378ab3c8a}"
+                                    name="col_{3b461abd-85e9-49fc-b173-4b924e4e88c9}"
+                                    type="UTC"
+                                    sourcelang="en"
+                                    novalue="0">1548070198054</adonis:attribute>
+                  <adonis:attribute id="{be463193-5d7f-485b-a64f-9fb54f5cd04c}"
+                                    name="col_{fbe6e369-25ca-4fdc-830a-89cb51a458ea}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">Adonis Power (ado)</adonis:attribute>
+                  <adonis:attribute id="{737c2778-4102-4c9d-834c-1624bb308d4c}"
+                                    name="col_{2512cc79-7dbc-42c6-ab14-2f4eee40e977}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">0.01</adonis:attribute>
+                  <adonis:attribute id="{30aac243-e47c-4f49-bd58-a40150b8e97b}"
+                                    name="col_{67e1771f-d294-4f3f-9b8d-643b0997ef06}"
+                                    type="ENUM"
+                                    sourcelang="en"
+                                    novalue="0"
+                                    lang-independent="v0">Draft</adonis:attribute>
+               </adonis:row>
+               <adonis:row id="{b0216dd7-9ebb-43ba-b324-ccfe9b4dc55a}" creationtime="1549357596">
+                  <adonis:attribute id="{a8cc2be0-32da-4e79-a4e2-5323e4affe33}"
+                                    name="col_{667b19e2-f759-4b37-9e6d-a3b3d78e8ab6}"
+                                    type="LONGSTRING"
+                                    sourcelang="en"
+                                    novalue="0">Transition "Submit to methodical review" has been executed.</adonis:attribute>
+                  <adonis:attribute id="{0cc92e8a-28d0-4d45-8898-34d6f4820b92}"
+                                    name="col_{3b461abd-85e9-49fc-b173-4b924e4e88c9}"
+                                    type="UTC"
+                                    sourcelang="en"
+                                    novalue="0">1549357596807</adonis:attribute>
+                  <adonis:attribute id="{a3294fab-1a0b-4865-a184-fdd48b8df829}"
+                                    name="col_{fbe6e369-25ca-4fdc-830a-89cb51a458ea}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">Adonis Power (ado)</adonis:attribute>
+                  <adonis:attribute id="{dbe5eb84-1575-42cf-b24a-686ed946b041}"
+                                    name="col_{2512cc79-7dbc-42c6-ab14-2f4eee40e977}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">0.01</adonis:attribute>
+                  <adonis:attribute id="{a0617950-6b27-4c8d-9b20-b0b24510400e}"
+                                    name="col_{67e1771f-d294-4f3f-9b8d-643b0997ef06}"
+                                    type="ENUM"
+                                    sourcelang="en"
+                                    novalue="0"
+                                    lang-independent="v1">Under methodical review</adonis:attribute>
+               </adonis:row>
+               <adonis:row id="{f59a5c57-c804-40d9-a9cc-81364d28858d}" creationtime="1549357610">
+                  <adonis:attribute id="{40f957a6-2c60-46a2-a3ec-45a37cd6e339}"
+                                    name="col_{667b19e2-f759-4b37-9e6d-a3b3d78e8ab6}"
+                                    type="LONGSTRING"
+                                    sourcelang="en"
+                                    novalue="0">Transition "Submit to business review" has been executed.</adonis:attribute>
+                  <adonis:attribute id="{f89356aa-4e33-4bf1-82f1-f3a83b9b3fe9}"
+                                    name="col_{3b461abd-85e9-49fc-b173-4b924e4e88c9}"
+                                    type="UTC"
+                                    sourcelang="en"
+                                    novalue="0">1549357610057</adonis:attribute>
+                  <adonis:attribute id="{dff53982-ff95-433f-9562-66a6e7fafa3a}"
+                                    name="col_{fbe6e369-25ca-4fdc-830a-89cb51a458ea}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">Adonis Power (ado)</adonis:attribute>
+                  <adonis:attribute id="{1040ec9b-6335-4194-b659-7c06d8236bd6}"
+                                    name="col_{2512cc79-7dbc-42c6-ab14-2f4eee40e977}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">0.01</adonis:attribute>
+                  <adonis:attribute id="{6c9d0477-cd93-4fb1-a893-08fb9bbfc4e5}"
+                                    name="col_{67e1771f-d294-4f3f-9b8d-643b0997ef06}"
+                                    type="ENUM"
+                                    sourcelang="en"
+                                    novalue="0"
+                                    lang-independent="v6">Under business review</adonis:attribute>
+               </adonis:row>
+               <adonis:row id="{f60816b0-97a3-48fb-8714-4403a83986f3}" creationtime="1549357628">
+                  <adonis:attribute id="{c494a004-e2a3-414c-84bf-0c6d72c09ea1}"
+                                    name="col_{667b19e2-f759-4b37-9e6d-a3b3d78e8ab6}"
+                                    type="LONGSTRING"
+                                    sourcelang="en"
+                                    novalue="0">Transition "Release" has been executed.</adonis:attribute>
+                  <adonis:attribute id="{083e6fca-6ef0-4ede-9632-ceb4cae33322}"
+                                    name="col_{3b461abd-85e9-49fc-b173-4b924e4e88c9}"
+                                    type="UTC"
+                                    sourcelang="en"
+                                    novalue="0">1549357628266</adonis:attribute>
+                  <adonis:attribute id="{3d216900-b09e-49b0-bf2a-ab3d9634431b}"
+                                    name="col_{fbe6e369-25ca-4fdc-830a-89cb51a458ea}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">Adonis Power (ado)</adonis:attribute>
+                  <adonis:attribute id="{d789433b-2796-411c-b9b6-6e052488f4db}"
+                                    name="col_{2512cc79-7dbc-42c6-ab14-2f4eee40e977}"
+                                    type="STRING"
+                                    sourcelang="en"
+                                    novalue="0">1.00</adonis:attribute>
+                  <adonis:attribute id="{a1093ccb-5eb9-4c93-a101-07e47a3bfa71}"
+                                    name="col_{67e1771f-d294-4f3f-9b8d-643b0997ef06}"
+                                    type="ENUM"
+                                    sourcelang="en"
+                                    novalue="0"
+                                    lang-independent="v5">Released</adonis:attribute>
+               </adonis:row>
+            </adonis:record>
+            <adonis:record name="A_ATTACHMENT_LIST"/>
+            <adonis:record name="CHANGE_HISTORY"/>
+            <adonis:record name="PROCESS_INDICATORS"/>
+            <adonis:record name="PROCESS_SUPPLIERS___REQUIREMENTS"/>
+            <adonis:record name="TERMS_ABBREVIATIONS"/>
+            <adonis:record name="PROCESS_CUSTOMERS___REQUIREMENTS"/>
+            <adonis:record name="SUGGESTION_FOR_IMPROVEMENT"/>
+         </adonis:modelattributes>
+      </extensionElements>
+      <participant processRef="process_188e27a2-a86b-4a4d-a817-5f44b46cc767"
+                   name="ADOmoney Bank"
+                   id="_188e27a2-a86b-4a4d-a817-5f44b46cc767">
+         <extensionElements/>
+      </participant>
+   </collaboration>
+   <process name="ADOmoney Bank"
+            id="process_188e27a2-a86b-4a4d-a817-5f44b46cc767"
+            isExecutable="false"
+            isClosed="false"
+            processType="None">
+      <extensionElements>
+         <adonis:instance>
+            <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0"
+                              lang-independent="v0">
+               <adonis:value>No change</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="MONITORING"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="BOUNDARY_VISIBLE"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>true</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_GRADIENT"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="COLOUR"
+                              type="INTEGER"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>16777215</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_DISPLAY_WATERMARK"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="FONT_COLOUR"
+                              type="INTEGER"
+                              notebook="0"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>0</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="IS_CLOSED"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="MULTIPLICITY_MAX"
+                              type="INTEGER"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>1</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="AUDITING"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="MULTIPLICITY_MIN"
+                              type="INTEGER"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>0</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="VISUALIZED_VALUES_POOL"
+                              type="ENUM"
+                              notebook="1"
+                              sourcelang="en"
+                              novalue="0"
+                              lang-independent="v0">
+               <adonis:value>None</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:attribute name="IS_EXECUTABLE"
+                              type="BOOL"
+                              notebook="1"
+                              sourcelang=""
+                              novalue="0">
+               <adonis:value>false</adonis:value>
+               <adonis:metavalue/>
+            </adonis:attribute>
+            <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+            <adonis:record name="OPEN_QUESTIONS"/>
+         </adonis:instance>
+      </extensionElements>
+      <laneSet id="laneSet_188e27a2-a86b-4a4d-a817-5f44b46cc767">
+         <lane name="Hiring Manager" id="_3e1c2aec-e4ee-44fb-bc48-a111ddc8cc0a">
+            <extensionElements>
+               <adonis:instance>
+                  <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                    type="ENUM"
+                                    notebook="1"
+                                    sourcelang=""
+                                    novalue="0"
+                                    lang-independent="v0">
+                     <adonis:value>No change</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="A_GRADIENT"
+                                    type="BOOL"
+                                    notebook="1"
+                                    sourcelang=""
+                                    novalue="0">
+                     <adonis:value>false</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="COLOUR"
+                                    type="INTEGER"
+                                    notebook="1"
+                                    sourcelang=""
+                                    novalue="0">
+                     <adonis:value>16777215</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="A_DISPLAY_WATERMARK"
+                                    type="BOOL"
+                                    notebook="1"
+                                    sourcelang=""
+                                    novalue="0">
+                     <adonis:value>false</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                    type="BOOL"
+                                    notebook="1"
+                                    sourcelang=""
+                                    novalue="0">
+                     <adonis:value>false</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="FONT_COLOUR"
+                                    type="INTEGER"
+                                    notebook="0"
+                                    sourcelang=""
+                                    novalue="0">
+                     <adonis:value>0</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:attribute name="VISUALIZED_VALUES_POOL"
+                                    type="ENUM"
+                                    notebook="1"
+                                    sourcelang="en"
+                                    novalue="0"
+                                    lang-independent="v0">
+                     <adonis:value>None</adonis:value>
+                     <adonis:metavalue/>
+                  </adonis:attribute>
+                  <adonis:relation id="_b7cbacec-3ae2-44da-8b71-ecc8444bc07f"
+                                   repoinstance="{a2f619bf-a8da-42b9-b95c-da75e6696614}"
+                                   class="RC_RESOURCE"
+                                   notebook="1">
+                     <adonis:endpoints>
+                        <adonis:endpoint name="TO"
+                                         type="repoinstance"
+                                         id="{956b7cb4-86d5-4a6c-8f1e-35b02ea14abc}">
+                           <adonis:target id="_ce89cce3-3a60-41bb-ad80-6b2a7295fb98"
+                                          class="C_ROLE"
+                                          info="Hiring Manager"
+                                          sourcelang="en"/>
+                        </adonis:endpoint>
+                        <adonis:endpoint name="FROM"
+                                         type="instance"
+                                         id="{c5c3a3ae-772e-4db0-b4bb-156f4e0bdd02}">
+                           <adonis:target class="C_LANE" id="_3e1c2aec-e4ee-44fb-bc48-a111ddc8cc0a"/>
+                        </adonis:endpoint>
+                     </adonis:endpoints>
+                  </adonis:relation>
+                  <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+                  <adonis:record name="OPEN_QUESTIONS"/>
+               </adonis:instance>
+            </extensionElements>
+            <flowNodeRef>_18a3a019-b946-4c0b-9413-52e2c59d3319</flowNodeRef>
+            <flowNodeRef>_5cb097c9-6c85-465c-96ba-69bfdb7e3535</flowNodeRef>
+            <flowNodeRef>_a7fb592d-f116-4a93-9f86-fdb9b3735c80</flowNodeRef>
+            <flowNodeRef>_fbf7b283-d8a1-41de-b80d-91558bb9129c</flowNodeRef>
+            <childLaneSet>
+               <lane name="Recruiter" id="_677d2335-a7e4-44ae-a2ca-320d2bc57f4a">
+                  <extensionElements>
+                     <adonis:instance>
+                        <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                          type="ENUM"
+                                          notebook="1"
+                                          sourcelang=""
+                                          novalue="0"
+                                          lang-independent="v0">
+                           <adonis:value>No change</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="A_GRADIENT"
+                                          type="BOOL"
+                                          notebook="1"
+                                          sourcelang=""
+                                          novalue="0">
+                           <adonis:value>false</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="COLOUR"
+                                          type="INTEGER"
+                                          notebook="1"
+                                          sourcelang=""
+                                          novalue="0">
+                           <adonis:value>16777215</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="A_DISPLAY_WATERMARK"
+                                          type="BOOL"
+                                          notebook="1"
+                                          sourcelang=""
+                                          novalue="0">
+                           <adonis:value>false</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                          type="BOOL"
+                                          notebook="1"
+                                          sourcelang=""
+                                          novalue="0">
+                           <adonis:value>false</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="FONT_COLOUR"
+                                          type="INTEGER"
+                                          notebook="0"
+                                          sourcelang=""
+                                          novalue="0">
+                           <adonis:value>0</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:attribute name="VISUALIZED_VALUES_POOL"
+                                          type="ENUM"
+                                          notebook="1"
+                                          sourcelang="en"
+                                          novalue="0"
+                                          lang-independent="v0">
+                           <adonis:value>None</adonis:value>
+                           <adonis:metavalue/>
+                        </adonis:attribute>
+                        <adonis:relation id="_61d040bb-9952-49fb-81ba-5752f22e0d8f"
+                                         repoinstance="{a2f619bf-a8da-42b9-b95c-da75e6696614}"
+                                         class="RC_RESOURCE"
+                                         notebook="1">
+                           <adonis:endpoints>
+                              <adonis:endpoint name="TO"
+                                               type="repoinstance"
+                                               id="{a5121d6e-f6ff-42fb-b873-9bac27674626}">
+                                 <adonis:target id="_b897e23f-2de4-4182-97f7-6406e5ffc736"
+                                                class="C_ROLE"
+                                                info="Recruiter"
+                                                sourcelang="en"/>
+                              </adonis:endpoint>
+                              <adonis:endpoint name="FROM"
+                                               type="instance"
+                                               id="{5d583b19-3249-4b6e-b448-8a54c3ac5ce3}">
+                                 <adonis:target class="C_LANE" id="_677d2335-a7e4-44ae-a2ca-320d2bc57f4a"/>
+                              </adonis:endpoint>
+                           </adonis:endpoints>
+                        </adonis:relation>
+                        <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+                        <adonis:record name="OPEN_QUESTIONS"/>
+                     </adonis:instance>
+                  </extensionElements>
+                  <flowNodeRef>_1e0b4bbc-d792-4468-8fb6-a8be008ecb77</flowNodeRef>
+                  <flowNodeRef>_1ed00806-fe78-48b1-b6ca-2910351dd0fd</flowNodeRef>
+                  <flowNodeRef>_3599c13b-4604-494a-bf6a-5030ef3bc5aa</flowNodeRef>
+                  <flowNodeRef>_3f86fa30-5233-41cb-bf46-82c720ae9ff3</flowNodeRef>
+                  <flowNodeRef>_575c41b0-6283-4353-9319-ac992725d30a</flowNodeRef>
+                  <flowNodeRef>_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51</flowNodeRef>
+               </lane>
+            </childLaneSet>
+         </lane>
+      </laneSet>
+      <manualTask name="Write job description and forward to recruitment"
+                  id="_18a3a019-b946-4c0b-9413-52e2c59d3319"
+                  isForCompensation="false">
+         <documentation id="documentation_18a3a019-b946-4c0b-9413-52e2c59d3319"><![CDATA[A very specific requirement to the job vacancy has to be written and forwarded to the recruitment department.]]></documentation>
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_EXECUTION_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>3600000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_RESTING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_WAITING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOLS_IF_RISKS_OR_CONTROLS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_COOPERATIONPARTICIPATION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOL_IF_DESCRIPTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="VISUALISE_REFERENCED_IT_SYSTEM_ELEMENTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_TRANSPORT_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_TASK"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>inside</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_RESPONSIBLE_FOR_EXECUTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>02</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COSTS"
+                                 type="DOUBLE"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_ACCOUNTABLE_FOR_APPROVING_RESULTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="CLASSIFICATION"
+                                 type="ENUMLIST"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>manual</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_TO_INFORM"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:relation id="_c26d6e21-5ccc-45ed-befb-a5d6c3c76327"
+                                repoinstance="{047fd780-f662-4c5b-9000-efc78f685713}"
+                                class="RESPONSIBLE_FOR_EXECUTION"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{2ae3e1f4-2d1c-4700-937f-8948ebb1c23b}">
+                        <adonis:target id="_ce89cce3-3a60-41bb-ad80-6b2a7295fb98"
+                                       class="C_ROLE"
+                                       info="Hiring Manager"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{5a57f9a7-3b55-4bba-b9c7-6d32aff4f619}">
+                        <adonis:target class="C_TASK" id="_18a3a019-b946-4c0b-9413-52e2c59d3319"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="A_BEHAVIOUR_DEFINITION"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_0952a569-6162-480e-a332-d960fb852f26</incoming>
+         <outgoing>_51f9b8da-7270-401a-8a57-74d0bdacdd66</outgoing>
+      </manualTask>
+      <manualTask name="Publish job advertisement on homepage"
+                  id="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"
+                  isForCompensation="false">
+         <documentation id="documentation_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"><![CDATA[The approved job advertisement has to be published on the homepage.]]></documentation>
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_EXECUTION_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>270000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_RESTING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_WAITING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>600000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOLS_IF_RISKS_OR_CONTROLS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_COOPERATIONPARTICIPATION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOL_IF_DESCRIPTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="VISUALISE_REFERENCED_IT_SYSTEM_ELEMENTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_TRANSPORT_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_TASK"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>inside</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_RESPONSIBLE_FOR_EXECUTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>07</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COSTS"
+                                 type="DOUBLE"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_ACCOUNTABLE_FOR_APPROVING_RESULTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="CLASSIFICATION"
+                                 type="ENUMLIST"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>manual</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_TO_INFORM"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:relation id="_25065931-fb21-4991-b373-389f9dfbdcf7"
+                                repoinstance="{1916e40a-b003-4d34-8f16-a23f598447a9}"
+                                class="RC_REFERENCED_IT_SYSTEM_ELEMENTS_CS"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{a750c467-7598-4a25-9e24-0269d8267e87}">
+                        <adonis:target id="_787d531d-5f88-4e14-b6a1-9d5ead1b1053"
+                                       class="C_APPLICATION"
+                                       info="Online Recruiting System"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{8d4040f3-ead2-452b-8d39-940860afd344}">
+                        <adonis:target class="C_TASK" id="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:relation id="_9127abcf-2b3a-4f1d-9b04-c5a81db2befc"
+                                repoinstance="{047fd780-f662-4c5b-9000-efc78f685713}"
+                                class="RESPONSIBLE_FOR_EXECUTION"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{17bdcdb5-9de8-4903-9b30-81430341d1f3}">
+                        <adonis:target id="_b897e23f-2de4-4182-97f7-6406e5ffc736"
+                                       class="C_ROLE"
+                                       info="Recruiter"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{c24b2ed1-b072-42b1-b674-2900d5f19119}">
+                        <adonis:target class="C_TASK" id="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="A_BEHAVIOUR_DEFINITION"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_f0df3fe0-d4a6-413d-9b3d-418ac3137b34</incoming>
+         <outgoing>_0d691c2b-2bfe-49e3-b8a1-f62d747864f2</outgoing>
+      </manualTask>
+      <parallelGateway name="Non-exclusive Gateway"
+                       id="_1ed00806-fe78-48b1-b6ca-2910351dd0fd"
+                       gatewayDirection="Diverging">
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_GATEWAY"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>do not show</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>06</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_CONVERGING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_961dee88-575c-4958-9601-c6d6feff3bd1</incoming>
+         <outgoing>_2aec8bd9-2baf-4409-9f4a-4195d0db9423</outgoing>
+         <outgoing>_f0df3fe0-d4a6-413d-9b3d-418ac3137b34</outgoing>
+      </parallelGateway>
+      <manualTask name="Complete job advertisement and send to approval"
+                  id="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"
+                  isForCompensation="false">
+         <documentation id="documentation_3599c13b-4604-494a-bf6a-5030ef3bc5aa"><![CDATA[The job description received from the specialist department has to be completed (layout, additional information etc.) to a job advertisement in accordance to the guidelines and approved by the Hiring Manager.]]></documentation>
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_EXECUTION_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>2700000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_RESTING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_WAITING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>720000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOLS_IF_RISKS_OR_CONTROLS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_COOPERATIONPARTICIPATION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOL_IF_DESCRIPTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="VISUALISE_REFERENCED_IT_SYSTEM_ELEMENTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_TRANSPORT_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_TASK"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>inside</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_RESPONSIBLE_FOR_EXECUTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>03</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COSTS"
+                                 type="DOUBLE"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_ACCOUNTABLE_FOR_APPROVING_RESULTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="CLASSIFICATION"
+                                 type="ENUMLIST"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>manual</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_TO_INFORM"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:relation id="_4c335b90-504a-411c-9ef5-c51a6e23192c"
+                                repoinstance="{047fd780-f662-4c5b-9000-efc78f685713}"
+                                class="RESPONSIBLE_FOR_EXECUTION"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{98a79d82-e3bd-46df-b064-52bea83c7155}">
+                        <adonis:target id="_b897e23f-2de4-4182-97f7-6406e5ffc736"
+                                       class="C_ROLE"
+                                       info="Recruiter"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{31047218-dfd2-477b-bffd-faab43451623}">
+                        <adonis:target class="C_TASK" id="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:relation id="_760305ce-0eaf-48d8-a9d8-fc1982bceb6e"
+                                repoinstance="{1916e40a-b003-4d34-8f16-a23f598447a9}"
+                                class="RC_REFERENCED_IT_SYSTEM_ELEMENTS_CS"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{15aba6bf-2ef9-4fb3-ad26-eb55514463cb}">
+                        <adonis:target id="_787d531d-5f88-4e14-b6a1-9d5ead1b1053"
+                                       class="C_APPLICATION"
+                                       info="Online Recruiting System"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{fd20d854-3f57-4487-a441-0d71c250a8f8}">
+                        <adonis:target class="C_TASK" id="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="A_BEHAVIOUR_DEFINITION"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_45c117c6-cc79-4920-9138-991a3cf331c0</incoming>
+         <incoming>_51f9b8da-7270-401a-8a57-74d0bdacdd66</incoming>
+         <outgoing>_67fa5bee-a3d9-4790-ae03-14a6b8b2b5ba</outgoing>
+      </manualTask>
+      <manualTask name="Select 3rd party platforms for publishing and publish"
+                  id="_3f86fa30-5233-41cb-bf46-82c720ae9ff3"
+                  isForCompensation="false">
+         <documentation id="documentation_3f86fa30-5233-41cb-bf46-82c720ae9ff3"><![CDATA[3rd party career platforms have to be selected on which the job advertisement will be published.]]></documentation>
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_EXECUTION_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>1800000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_RESTING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_WAITING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOLS_IF_RISKS_OR_CONTROLS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_COOPERATIONPARTICIPATION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOL_IF_DESCRIPTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="VISUALISE_REFERENCED_IT_SYSTEM_ELEMENTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_TRANSPORT_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_TASK"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>inside</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_RESPONSIBLE_FOR_EXECUTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>08</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COSTS"
+                                 type="DOUBLE"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_ACCOUNTABLE_FOR_APPROVING_RESULTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="CLASSIFICATION"
+                                 type="ENUMLIST"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>manual</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_TO_INFORM"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:relation id="_a76e3f1e-e583-482e-b7be-1f837a972dd7"
+                                repoinstance="{047fd780-f662-4c5b-9000-efc78f685713}"
+                                class="RESPONSIBLE_FOR_EXECUTION"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{a9324cde-1a2b-4fda-a7bd-c8e674464977}">
+                        <adonis:target id="_b897e23f-2de4-4182-97f7-6406e5ffc736"
+                                       class="C_ROLE"
+                                       info="Recruiter"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{daa03ef8-0bb1-4e19-81c8-841007bdff08}">
+                        <adonis:target class="C_TASK" id="_3f86fa30-5233-41cb-bf46-82c720ae9ff3"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="A_BEHAVIOUR_DEFINITION"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_2aec8bd9-2baf-4409-9f4a-4195d0db9423</incoming>
+         <outgoing>_e3e67821-fbd5-47ad-8256-ba94f6e6f729</outgoing>
+      </manualTask>
+      <endEvent name="Job vacancy advertised"
+                id="_575c41b0-6283-4353-9319-ac992725d30a">
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="TYPE_END"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>10</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_NAME"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_267ea404-227e-4b3a-81a2-f82865a821bb</incoming>
+      </endEvent>
+      <startEvent name="Job vacancy is to advertise"
+                  id="_5cb097c9-6c85-465c-96ba-69bfdb7e3535">
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="TIME_PERIOD"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v1">
+                  <adonis:value>Per month</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>01</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_QUANTITY"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>15</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_NAME"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <outgoing>_0952a569-6162-480e-a332-d960fb852f26</outgoing>
+      </startEvent>
+      <exclusiveGateway name="Job advertisement approved?"
+                        id="_a7fb592d-f116-4a93-9f86-fdb9b3735c80"
+                        gatewayDirection="Diverging">
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_GATEWAY"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v1">
+                  <adonis:value>below</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>05</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_2a48e5a9-5fa6-4193-86f8-103969b898c5</incoming>
+         <outgoing>_45c117c6-cc79-4920-9138-991a3cf331c0</outgoing>
+         <outgoing>_961dee88-575c-4958-9601-c6d6feff3bd1</outgoing>
+      </exclusiveGateway>
+      <parallelGateway name="Non-exclusive Gateway"
+                       id="_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51"
+                       gatewayDirection="Converging">
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_GATEWAY"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>do not show</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>09</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_CONVERGING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_0d691c2b-2bfe-49e3-b8a1-f62d747864f2</incoming>
+         <incoming>_e3e67821-fbd5-47ad-8256-ba94f6e6f729</incoming>
+         <outgoing>_267ea404-227e-4b3a-81a2-f82865a821bb</outgoing>
+      </parallelGateway>
+      <manualTask name="Check and approve job advertisement"
+                  id="_fbf7b283-d8a1-41de-b80d-91558bb9129c"
+                  isForCompensation="false">
+         <documentation id="documentation_fbf7b283-d8a1-41de-b80d-91558bb9129c"><![CDATA[The job description edited to a job advertisement has to be checked and approved.]]></documentation>
+         <extensionElements>
+            <adonis:instance>
+               <adonis:attribute name="IDENTIFICATION_OF_CHANGES"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>No change</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_EXECUTION_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>900000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_RESTING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_WAITING_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>1200000</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOLS_IF_RISKS_OR_CONTROLS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_COOPERATIONPARTICIPATION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_SYMBOL_IF_DESCRIPTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_INPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="VISUALISE_REFERENCED_IT_SYSTEM_ELEMENTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_TRANSPORT_TIME"
+                                 type="UTC"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_NAME_TASK"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>inside</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_NEED_FOR_ACTION_CS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_RESPONSIBLE_FOR_EXECUTION"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>true</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COLLECTION_DATATYPE_OUTPUT"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="0"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="A_ORDER"
+                                 type="SHORTSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>04</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="OBJECT_TYPE"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>No entry</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="COSTS"
+                                 type="DOUBLE"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_ACCOUNTABLE_FOR_APPROVING_RESULTS"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="CLASSIFICATION"
+                                 type="ENUMLIST"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>manual</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DISPLAY_TO_INFORM"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:relation id="_83232720-1481-456a-82f8-07d3d82686f6"
+                                repoinstance="{047fd780-f662-4c5b-9000-efc78f685713}"
+                                class="RESPONSIBLE_FOR_EXECUTION"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{aa26881e-3afc-4535-bddb-6a7385a14616}">
+                        <adonis:target id="_ce89cce3-3a60-41bb-ad80-6b2a7295fb98"
+                                       class="C_ROLE"
+                                       info="Hiring Manager"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{532dabb1-c409-4836-b6e0-4cdfacae0822}">
+                        <adonis:target class="C_TASK" id="_fbf7b283-d8a1-41de-b80d-91558bb9129c"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:relation id="_d44c421e-65bb-467c-be07-9edde5d5de0b"
+                                repoinstance="{1916e40a-b003-4d34-8f16-a23f598447a9}"
+                                class="RC_REFERENCED_IT_SYSTEM_ELEMENTS_CS"
+                                notebook="1">
+                  <adonis:endpoints>
+                     <adonis:endpoint name="TO"
+                                      type="repoinstance"
+                                      id="{2b90a1ab-530a-408f-b562-5a8930f3ad24}">
+                        <adonis:target id="_787d531d-5f88-4e14-b6a1-9d5ead1b1053"
+                                       class="C_APPLICATION"
+                                       info="Online Recruiting System"
+                                       sourcelang="en"/>
+                     </adonis:endpoint>
+                     <adonis:endpoint name="FROM"
+                                      type="instance"
+                                      id="{537ef700-99f0-497a-ae07-07ca2e269d4f}">
+                        <adonis:target class="C_TASK" id="_fbf7b283-d8a1-41de-b80d-91558bb9129c"/>
+                     </adonis:endpoint>
+                  </adonis:endpoints>
+               </adonis:relation>
+               <adonis:record name="A_ATTACHMENT_LIST_CS"/>
+               <adonis:record name="A_BEHAVIOUR_DEFINITION"/>
+               <adonis:record name="OPEN_QUESTIONS"/>
+            </adonis:instance>
+         </extensionElements>
+         <incoming>_67fa5bee-a3d9-4790-ae03-14a6b8b2b5ba</incoming>
+         <outgoing>_2a48e5a9-5fa6-4193-86f8-103969b898c5</outgoing>
+      </manualTask>
+      <sequenceFlow sourceRef="_5cb097c9-6c85-465c-96ba-69bfdb7e3535"
+                    targetRef="_18a3a019-b946-4c0b-9413-52e2c59d3319"
+                    id="_0952a569-6162-480e-a332-d960fb852f26">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"
+                    targetRef="_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51"
+                    id="_0d691c2b-2bfe-49e3-b8a1-f62d747864f2">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51"
+                    targetRef="_575c41b0-6283-4353-9319-ac992725d30a"
+                    id="_267ea404-227e-4b3a-81a2-f82865a821bb">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_fbf7b283-d8a1-41de-b80d-91558bb9129c"
+                    targetRef="_a7fb592d-f116-4a93-9f86-fdb9b3735c80"
+                    id="_2a48e5a9-5fa6-4193-86f8-103969b898c5">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_1ed00806-fe78-48b1-b6ca-2910351dd0fd"
+                    targetRef="_3f86fa30-5233-41cb-bf46-82c720ae9ff3"
+                    id="_2aec8bd9-2baf-4409-9f4a-4195d0db9423">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_a7fb592d-f116-4a93-9f86-fdb9b3735c80"
+                    targetRef="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"
+                    name="No"
+                    id="_45c117c6-cc79-4920-9138-991a3cf331c0">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="TRANSITION_CONDITION"
+                                 type="LONGSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>0.2;0.1;0</adonis:value>
+                  <adonis:metavalue>`0`&lt;x&gt;`12`&lt;/x&gt;</adonis:metavalue>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DENOMINATION"
+                                 type="STRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>No</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_45c117c6-cc79-4920-9138-991a3cf331c0condExpr"
+                              xsi:type="tFormalExpression"><![CDATA[0.2;0.1;0]]></conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_18a3a019-b946-4c0b-9413-52e2c59d3319"
+                    targetRef="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"
+                    id="_51f9b8da-7270-401a-8a57-74d0bdacdd66">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"
+                    targetRef="_fbf7b283-d8a1-41de-b80d-91558bb9129c"
+                    id="_67fa5bee-a3d9-4790-ae03-14a6b8b2b5ba">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_a7fb592d-f116-4a93-9f86-fdb9b3735c80"
+                    targetRef="_1ed00806-fe78-48b1-b6ca-2910351dd0fd"
+                    name="Yes"
+                    id="_961dee88-575c-4958-9601-c6d6feff3bd1">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="TRANSITION_CONDITION"
+                                 type="LONGSTRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>0.8;0.9;1</adonis:value>
+                  <adonis:metavalue>`0`&lt;x&gt;`12`&lt;/x&gt;</adonis:metavalue>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="DENOMINATION"
+                                 type="STRING"
+                                 notebook="1"
+                                 sourcelang="en"
+                                 novalue="0">
+                  <adonis:value>Yes</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+         <conditionExpression id="_961dee88-575c-4958-9601-c6d6feff3bd1condExpr"
+                              xsi:type="tFormalExpression"><![CDATA[0.8;0.9;1]]></conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_3f86fa30-5233-41cb-bf46-82c720ae9ff3"
+                    targetRef="_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51"
+                    id="_e3e67821-fbd5-47ad-8256-ba94f6e6f729">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow sourceRef="_1ed00806-fe78-48b1-b6ca-2910351dd0fd"
+                    targetRef="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"
+                    id="_f0df3fe0-d4a6-413d-9b3d-418ac3137b34">
+         <extensionElements>
+            <adonis:connector>
+               <adonis:attribute name="VISUALIZED_VALUES_SUBSEQUENT"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v2">
+                  <adonis:value>Name and transition condition</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="MONITORING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="FONT_COLOUR"
+                                 type="INTEGER"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>0</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="AUDITING"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="REPRESENTATION_HAS_PROCESS"
+                                 type="ENUM"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0"
+                                 lang-independent="v0">
+                  <adonis:value>automatic</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:attribute name="IS_IMMEDIATE"
+                                 type="BOOL"
+                                 notebook="1"
+                                 sourcelang=""
+                                 novalue="0">
+                  <adonis:value>false</adonis:value>
+                  <adonis:metavalue/>
+               </adonis:attribute>
+               <adonis:record name="SIMULATION_VARIABLES"/>
+            </adonis:connector>
+         </extensionElements>
+      </sequenceFlow>
+   </process>
+   <bpmndi:BPMNDiagram name="SP.07.03.01 Advertise a job vacancy"
+                       id="Diagram_b614b9a5-c007-41a4-95b1-6edc21b4756e">
+      <bpmndi:BPMNPlane id="BPMNPlane_b614b9a5-c007-41a4-95b1-6edc21b4756e"
+                        bpmnElement="Collaboration_b614b9a5-c007-41a4-95b1-6edc21b4756e">
+         <bpmndi:BPMNShape bpmnElement="_188e27a2-a86b-4a4d-a817-5f44b46cc767"
+                           isHorizontal="true"
+                           id="BPMN_Shape_188e27a2-a86b-4a4d-a817-5f44b46cc767">
+            <omgdc:Bounds height="530" width="1891" x="19" y="38"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_18a3a019-b946-4c0b-9413-52e2c59d3319"
+                           id="BPMN_Shape_18a3a019-b946-4c0b-9413-52e2c59d3319">
+            <omgdc:Bounds height="76" width="151" x="265" y="95"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_3e1c2aec-e4ee-44fb-bc48-a111ddc8cc0a"
+                           isHorizontal="true"
+                           id="BPMN_Shape_3e1c2aec-e4ee-44fb-bc48-a111ddc8cc0a">
+            <omgdc:Bounds height="227" width="1851" x="59" y="38"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_5cb097c9-6c85-465c-96ba-69bfdb7e3535"
+                           id="BPMN_Shape_5cb097c9-6c85-465c-96ba-69bfdb7e3535">
+            <omgdc:Bounds width="56" height="56" x="142" y="105"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51"
+                           id="BPMN_Shape_ee5c796c-f374-48e6-b9b1-70a7a2f9ad51">
+            <omgdc:Bounds width="56" height="56" x="1599" y="313"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_677d2335-a7e4-44ae-a2ca-320d2bc57f4a"
+                           isHorizontal="true"
+                           id="BPMN_Shape_677d2335-a7e4-44ae-a2ca-320d2bc57f4a">
+            <omgdc:Bounds height="303" width="1851" x="59" y="265"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_3f86fa30-5233-41cb-bf46-82c720ae9ff3"
+                           id="BPMN_Shape_3f86fa30-5233-41cb-bf46-82c720ae9ff3">
+            <omgdc:Bounds height="76" width="151" x="1400" y="455"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_fbf7b283-d8a1-41de-b80d-91558bb9129c"
+                           id="BPMN_Shape_fbf7b283-d8a1-41de-b80d-91558bb9129c">
+            <omgdc:Bounds height="76" width="151" x="833" y="95"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_a7fb592d-f116-4a93-9f86-fdb9b3735c80"
+                           isMarkerVisible="false"
+                           id="BPMN_Shape_a7fb592d-f116-4a93-9f86-fdb9b3735c80">
+            <omgdc:Bounds width="56" height="56" x="1069" y="105"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_1e0b4bbc-d792-4468-8fb6-a8be008ecb77"
+                           id="BPMN_Shape_1e0b4bbc-d792-4468-8fb6-a8be008ecb77">
+            <omgdc:Bounds height="76" width="151" x="1401" y="303"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_575c41b0-6283-4353-9319-ac992725d30a"
+                           id="BPMN_Shape_575c41b0-6283-4353-9319-ac992725d30a">
+            <omgdc:Bounds width="56" height="56" x="1731" y="313"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_1ed00806-fe78-48b1-b6ca-2910351dd0fd"
+                           id="BPMN_Shape_1ed00806-fe78-48b1-b6ca-2910351dd0fd">
+            <omgdc:Bounds width="56" height="56" x="1296" y="313"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_3599c13b-4604-494a-bf6a-5030ef3bc5aa"
+                           id="BPMN_Shape_3599c13b-4604-494a-bf6a-5030ef3bc5aa">
+            <omgdc:Bounds height="76" width="151" x="568" y="303"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge id="BPMN_Edge_0952a569-6162-480e-a332-d960fb852f26"
+                          bpmnElement="_0952a569-6162-480e-a332-d960fb852f26">
+            <omgdi:waypoint x="202" y="133"/>
+            <omgdi:waypoint x="260" y="133"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_0d691c2b-2bfe-49e3-b8a1-f62d747864f2"
+                          bpmnElement="_0d691c2b-2bfe-49e3-b8a1-f62d747864f2">
+            <omgdi:waypoint x="1557" y="341"/>
+            <omgdi:waypoint x="1595" y="341"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1576" y="341"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_267ea404-227e-4b3a-81a2-f82865a821bb"
+                          bpmnElement="_267ea404-227e-4b3a-81a2-f82865a821bb">
+            <omgdi:waypoint x="1659" y="341"/>
+            <omgdi:waypoint x="1729" y="341"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1673" y="341"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_2a48e5a9-5fa6-4193-86f8-103969b898c5"
+                          bpmnElement="_2a48e5a9-5fa6-4193-86f8-103969b898c5">
+            <omgdi:waypoint x="989" y="133"/>
+            <omgdi:waypoint x="1065" y="133"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1027" y="133"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_2aec8bd9-2baf-4409-9f4a-4195d0db9423"
+                          bpmnElement="_2aec8bd9-2baf-4409-9f4a-4195d0db9423">
+            <omgdi:waypoint x="1325" y="373"/>
+            <omgdi:waypoint x="1325" y="492"/>
+            <omgdi:waypoint x="1395" y="492"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1325" y="431"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_45c117c6-cc79-4920-9138-991a3cf331c0"
+                          bpmnElement="_45c117c6-cc79-4920-9138-991a3cf331c0">
+            <omgdi:waypoint x="1098" y="101"/>
+            <omgdi:waypoint x="1098" y="57"/>
+            <omgdi:waypoint x="511" y="57"/>
+            <omgdi:waypoint x="511" y="322"/>
+            <omgdi:waypoint x="563" y="322"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1098" y="85"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_51f9b8da-7270-401a-8a57-74d0bdacdd66"
+                          bpmnElement="_51f9b8da-7270-401a-8a57-74d0bdacdd66">
+            <omgdi:waypoint x="421" y="133"/>
+            <omgdi:waypoint x="473" y="133"/>
+            <omgdi:waypoint x="473" y="341"/>
+            <omgdi:waypoint x="563" y="341"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="473" y="177"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_67fa5bee-a3d9-4790-ae03-14a6b8b2b5ba"
+                          bpmnElement="_67fa5bee-a3d9-4790-ae03-14a6b8b2b5ba">
+            <omgdi:waypoint x="724" y="341"/>
+            <omgdi:waypoint x="776" y="341"/>
+            <omgdi:waypoint x="776" y="133"/>
+            <omgdi:waypoint x="828" y="133"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="776" y="241"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_961dee88-575c-4958-9601-c6d6feff3bd1"
+                          bpmnElement="_961dee88-575c-4958-9601-c6d6feff3bd1">
+            <omgdi:waypoint x="1129" y="133"/>
+            <omgdi:waypoint x="1212" y="133"/>
+            <omgdi:waypoint x="1212" y="341"/>
+            <omgdi:waypoint x="1292" y="341"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1179" y="133"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_e3e67821-fbd5-47ad-8256-ba94f6e6f729"
+                          bpmnElement="_e3e67821-fbd5-47ad-8256-ba94f6e6f729">
+            <omgdi:waypoint x="1556" y="492"/>
+            <omgdi:waypoint x="1628" y="492"/>
+            <omgdi:waypoint x="1628" y="373"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1590" y="492"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge id="BPMN_Edge_f0df3fe0-d4a6-413d-9b3d-418ac3137b34"
+                          bpmnElement="_f0df3fe0-d4a6-413d-9b3d-418ac3137b34">
+            <omgdi:waypoint x="1356" y="341"/>
+            <omgdi:waypoint x="1396" y="341"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0" width="0" x="1376" y="341"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
