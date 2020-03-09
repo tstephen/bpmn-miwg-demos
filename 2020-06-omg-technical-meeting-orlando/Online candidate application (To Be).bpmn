@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<semantic:definitions xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:trisobpmn="http://www.trisotech.com/2014/triso/bpmn" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:trisofeed="http://trisotech.com/feed" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:drools="http://www.jboss.org/drools" xmlns:openapi="https://openapis.org/omg/extension/1.0"                 xmlns="http://www.trisotech.com/definitions/_fede5143-9714-437f-a16c-ec9b2714a70b" id="_fede5143-9714-437f-a16c-ec9b2714a70b" targetNamespace="http://www.trisotech.com/definitions/_fede5143-9714-437f-a16c-ec9b2714a70b" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" exporter="BPMN Modeler" exporterVersion="6.8.0" name="Online candidate application" trisobpmn:logoChoice="Default">
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:trisobpmn="http://www.trisotech.com/2014/triso/bpmn" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:trisofeed="http://trisotech.com/feed" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:drools="http://www.jboss.org/drools"                 xmlns="http://www.trisotech.com/definitions/_fede5143-9714-437f-a16c-ec9b2714a70b" id="_fede5143-9714-437f-a16c-ec9b2714a70b" targetNamespace="http://www.trisotech.com/definitions/_fede5143-9714-437f-a16c-ec9b2714a70b" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" exporter="Workflow Modeler" exporterVersion="6.9.1" name="Online candidate application (To Be)" trisobpmn:logoChoice="Default">
     <semantic:itemDefinition structureRef="feel:string" isCollection="false" triso:basicType="true" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="triso_string" id="_triso-default-bpmnItemDefinition-string_id"/>
+    <semantic:resource name="Applicant" id="_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296"/>
+    <semantic:resource name="Recruiter" id="_b77fe2ca-5538-4c04-95c1-16bd7d7a4388"/>
+    <semantic:resource name="Hiring Manager" id="_a083246b-f6f3-415e-81e4-ea87c861d70d"/>
     <semantic:collaboration id="_05cb29d9-ea4b-4a97-9c89-05f664301999">
         <semantic:participant id="_88efbc0e-dcee-4821-b7c2-88bfb7bb3076" name="Eu Bank" processRef="_42ea75f9-5e16-4f31-852a-314879f13e08"/>
     </semantic:collaboration>
@@ -21,6 +24,9 @@
                 <semantic:flowNodeRef>_cee441a1-7146-415c-8c30-4403df8e459e</semantic:flowNodeRef>
                 <semantic:flowNodeRef>_409f3a16-ce4c-42ea-92ff-8ab0c1771d42</semantic:flowNodeRef>
                 <semantic:flowNodeRef>_1171dbf1-d178-4b8b-92aa-f53b5c14fed3</semantic:flowNodeRef>
+                <semantic:flowNodeRef>_626c03fe-c62a-4d1e-882e-5b23ee37ea18</semantic:flowNodeRef>
+                <semantic:flowNodeRef>_a01bffc3-e6c4-49d1-bd5a-97222a17ee0b</semantic:flowNodeRef>
+                <semantic:flowNodeRef>_95ba3b44-a120-4c33-ad02-6c2e1f8c35a7</semantic:flowNodeRef>
             </semantic:lane>
             <semantic:lane id="_4e470f7d-6a37-4f02-a4d9-631377f032ed" name="Online system">
                 <semantic:flowNodeRef>_9414b8b2-c7a3-4df3-88b3-0ca7d69ea180</semantic:flowNodeRef>
@@ -35,8 +41,20 @@
             </semantic:lane>
         </semantic:laneSet>
         <semantic:userTask id="_dc62ff7e-2668-4495-9e6c-91a821cb5de4" name="Conduct personal interview" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;Recruiter and Hiring Manager have to conduct a personal interview with the applicant in accordance with the guidelines.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_3c9202af-d7d2-4b46-a3dc-7a0e415e9412" predicate="consulted">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_0c0dec91-7d2f-4cd7-b70e-e66fde60a883</semantic:incoming>
             <semantic:outgoing>_c079c42f-c4de-44ed-8210-8095a480ccee</semantic:outgoing>
+            <semantic:performer id="_710b9298-ff04-40e2-90e7-be5d980c1666">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
+            <semantic:performer id="_07ba106e-f7aa-4dc2-990c-51ea40ebb9a5">
+                <semantic:resourceRef>_a083246b-f6f3-415e-81e4-ea87c861d70d</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:exclusiveGateway id="_cb75a74d-17d6-4be0-9e15-83ea1be9ba43" name="Application for &#10;key position?" gatewayDirection="Diverging">
             <semantic:incoming>_c079c42f-c4de-44ed-8210-8095a480ccee</semantic:incoming>
@@ -44,8 +62,17 @@
             <semantic:outgoing>_6abb534d-7c22-45ab-a1e1-1e2bc6064f16</semantic:outgoing>
         </semantic:exclusiveGateway>
         <semantic:userTask id="_14c55a56-0e1f-4a1c-bd42-d225443f77c1" name="Conduct phone interview" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;With the applicant for a key position a phone interview has to be conducted.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_797db3a0-99b7-4676-9adf-9ff8e5c5bf6e" predicate="consulted">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_1b8e28eb-7dbb-4bb1-be98-a8cc6252ae7c</semantic:incoming>
             <semantic:outgoing>_8db85a52-9d96-444c-a655-a1d5ffe83d36</semantic:outgoing>
+            <semantic:performer id="_accf08fb-2cbb-48b2-a10b-1b654d8bf2f4">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:parallelGateway id="_4e4bd18e-7130-4aee-b030-676626bdade2" gatewayDirection="Diverging">
             <semantic:incoming>_395364a0-53f5-4805-93e8-887e9fef805c</semantic:incoming>
@@ -53,12 +80,25 @@
             <semantic:outgoing>_a077887b-7e39-411d-ab58-40fa94c0b545</semantic:outgoing>
         </semantic:parallelGateway>
         <semantic:userTask id="_831e734c-580e-4d79-ab57-6c9334d5c848" name="Set up appointment with the applicant for an assessment centre" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;An appointment for the assessment centre has be to set up with the applicant. This can be done via phone, email or the application portal.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_8de4c167-a55d-4b0d-ad98-bd6bfcf63b80" predicate="informed">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_3abece1b-9c4e-4132-a831-d48005774a45</semantic:incoming>
             <semantic:outgoing>_4750d2b2-2dd9-425e-8e8c-d063d4458ab2</semantic:outgoing>
+            <semantic:performer id="_a5fe9c3b-8ff1-4408-9fab-dba65f7cd499">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:userTask id="_d95a27f0-dc3f-45ad-8c39-297a3fa88394" name="Plan and prepare assessment centre" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;According to the company guidelines, the assessment centre has to be planned and the costs (documents, material etc.) have to be booked.&lt;/p&gt;</semantic:documentation>
             <semantic:incoming>_a077887b-7e39-411d-ab58-40fa94c0b545</semantic:incoming>
             <semantic:outgoing>_eb6bcfd9-6cb9-40c2-929f-b49706ab4a70</semantic:outgoing>
+            <semantic:performer id="_28e972b8-d99c-4663-a760-b0f35011f0fb">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:parallelGateway id="_493b0737-5daa-4df1-ba36-b2925474a600" gatewayDirection="Converging">
             <semantic:incoming>_4750d2b2-2dd9-425e-8e8c-d063d4458ab2</semantic:incoming>
@@ -66,8 +106,15 @@
             <semantic:outgoing>_1245fc3d-a161-484b-8daf-1bca5c04d800</semantic:outgoing>
         </semantic:parallelGateway>
         <semantic:userTask id="_a6c5b351-2dd2-4802-9a70-b6823a567d52" name="Conduct assessment centre" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The applicant has to go through the assessment centre, which is carried out by the Recruiter and the specialist department (Hiring Manager).&lt;/p&gt;</semantic:documentation>
             <semantic:incoming>_1245fc3d-a161-484b-8daf-1bca5c04d800</semantic:incoming>
             <semantic:outgoing>_dc7c0cf9-7d67-43ea-9d37-8d6ef86bcc2f</semantic:outgoing>
+            <semantic:performer id="_f8390b7b-a840-4746-88f9-3a3fb071e956">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
+            <semantic:performer id="_4fbd2dc8-c6a1-4799-ade1-c24a632a9004">
+                <semantic:resourceRef>_a083246b-f6f3-415e-81e4-ea87c861d70d</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:exclusiveGateway id="_9f02a71b-0261-4f79-bb8d-a021202b664e" name="Cooperation with candidate after&#10; assessment centre possible?" gatewayDirection="Diverging">
             <semantic:incoming>_17c41536-7fde-4ba7-982c-831b04038295</semantic:incoming>
@@ -75,12 +122,30 @@
             <semantic:outgoing>_b7913050-ecec-43e9-8989-60c8ae292828</semantic:outgoing>
         </semantic:exclusiveGateway>
         <semantic:sendTask id="_ab4bf9dd-aa6c-4e9f-911a-8446ccd4e2cd" name="Write letter of acceptance and send to applicant" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;A letter of acceptance has to be written and sent to the applicant via email.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_c590233c-f9f0-40c5-94be-c90c4f264b91" predicate="informed">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_f7d0c50c-189e-40bb-b2c2-0bb860716bb2</semantic:incoming>
             <semantic:outgoing>_3ad32df1-8684-4920-aa33-a95a6936d5dd</semantic:outgoing>
+            <semantic:performer id="_bd50d467-737f-4ca9-bd86-2ba4290deb74">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
         </semantic:sendTask>
         <semantic:sendTask id="_b939d39b-4e9a-41b0-836e-4cfcd8e0d7f3" name="Write rejection and send to applicant" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;An individual rejection has to be written for and sent to the applicant.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_eb690ac1-efc8-49ff-9e9d-0d98c01bf49f" predicate="informed">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_b7913050-ecec-43e9-8989-60c8ae292828</semantic:incoming>
             <semantic:outgoing>_f5442629-c882-4676-b2a4-b5cae9a0d5d8</semantic:outgoing>
+            <semantic:performer id="_3e5d2297-2cd9-417d-a9cf-9646cb5b418b">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
         </semantic:sendTask>
         <semantic:endEvent id="_cee441a1-7146-415c-8c30-4403df8e459e" name="Applicant hired">
             <semantic:incoming>_3ad32df1-8684-4920-aa33-a95a6936d5dd</semantic:incoming>
@@ -89,14 +154,44 @@
             <semantic:incoming>_f5442629-c882-4676-b2a4-b5cae9a0d5d8</semantic:incoming>
         </semantic:endEvent>
         <semantic:userTask id="_1171dbf1-d178-4b8b-92aa-f53b5c14fed3" name="Agree on applicant" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The Recruiter and the Hiring Manager have to agree on the applicant to be able to decide about the recruitment of the applicant.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_7768c160-be2c-4222-9241-3bf640dc6e60" predicate="where">_44a8d1ad-cfd4-404e-89d8-09d078fd9691</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_6abb534d-7c22-45ab-a1e1-1e2bc6064f16</semantic:incoming>
             <semantic:incoming>_dc7c0cf9-7d67-43ea-9d37-8d6ef86bcc2f</semantic:incoming>
             <semantic:outgoing>_17c41536-7fde-4ba7-982c-831b04038295</semantic:outgoing>
+            <semantic:performer id="_33788b02-245f-4738-b4a9-a72efd719db5">
+                <semantic:resourceRef>_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</semantic:resourceRef>
+            </semantic:performer>
+            <semantic:performer id="_1a29b17e-075a-4a01-82b5-9f3a92af0d2a">
+                <semantic:resourceRef>_a083246b-f6f3-415e-81e4-ea87c861d70d</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
+        <semantic:exclusiveGateway id="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" name="Interesting applicant?" gatewayDirection="Diverging">
+            <semantic:incoming>_8db85a52-9d96-444c-a655-a1d5ffe83d36</semantic:incoming>
+            <semantic:outgoing>_83549564-acf6-4b59-b850-2be00af1cfcd</semantic:outgoing>
+            <semantic:outgoing>_a245aa14-be45-45c9-90bd-e867e8d34447</semantic:outgoing>
+        </semantic:exclusiveGateway>
+        <semantic:sendTask id="_a01bffc3-e6c4-49d1-bd5a-97222a17ee0b" name="Write rejection after pre-selection and send to applicant" implementation="##WebService">
+            <semantic:incoming>_a245aa14-be45-45c9-90bd-e867e8d34447</semantic:incoming>
+            <semantic:outgoing>_3edd1e52-e170-405f-8ee1-d5deff86f4c3</semantic:outgoing>
+        </semantic:sendTask>
+        <semantic:endEvent id="_95ba3b44-a120-4c33-ad02-6c2e1f8c35a7" name="Applicant rejected after pre-selection">
+            <semantic:incoming>_3edd1e52-e170-405f-8ee1-d5deff86f4c3</semantic:incoming>
+        </semantic:endEvent>
         <semantic:startEvent id="_9414b8b2-c7a3-4df3-88b3-0ca7d69ea180" name="Candidate application received">
             <semantic:outgoing>_ac047ee3-1d30-4be9-88ff-07e56a76b5cd</semantic:outgoing>
         </semantic:startEvent>
         <semantic:serviceTask id="_5d991b0a-ce7f-4147-b1a2-15ed9dce4530" name="Match entered criteria with minimum criteria" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;It has to be examined whether the minimum criteria are fulfilled and a preselection has to be performed.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_2419717e-5ab0-4a7f-b999-8470a1cee463" predicate="where">_44a8d1ad-cfd4-404e-89d8-09d078fd9691</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_ac047ee3-1d30-4be9-88ff-07e56a76b5cd</semantic:incoming>
             <semantic:outgoing>_f1ff7975-d52f-4dea-9a5c-a010e9a4308e</semantic:outgoing>
         </semantic:serviceTask>
@@ -106,6 +201,13 @@
             <semantic:outgoing>_ccf6dcd1-86e1-48d1-a429-80a64b1e1596</semantic:outgoing>
         </semantic:exclusiveGateway>
         <semantic:sendTask id="_169d6419-d0f4-4270-bfb0-8349da2eaccf" name="Write rejection after pre-selection and send to applicant" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;For applicants who drop out after the preselection, a rejection must be written and sent to the applicant.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_eaff93cf-5bfb-454d-9831-9d5d1d4b5262" predicate="informed">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                    <triso:systemRef id="_19a2ba81-25ed-4165-85e4-8e552ef84cfe" predicate="where">_44a8d1ad-cfd4-404e-89d8-09d078fd9691</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_74d24dd9-9afc-41f0-a928-afae3cb0e866</semantic:incoming>
             <semantic:outgoing>_c5b6fd4a-0b59-4081-bf53-79e36f3e7735</semantic:outgoing>
         </semantic:sendTask>
@@ -118,15 +220,36 @@
             <semantic:outgoing>_138630d8-52c6-4c57-9725-30c7d6cfc828</semantic:outgoing>
         </semantic:exclusiveGateway>
         <semantic:serviceTask id="_f4cfe043-8b15-4663-b527-aba3c620600c" name="Schedule appointment for phone interview for recruiter" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The system schedules an appointment for the telephone interview for the recruiter.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_ab41f16a-84c0-4f58-96dd-a84b2e9b43cf" predicate="where">_44a8d1ad-cfd4-404e-89d8-09d078fd9691</triso:systemRef>
+                    <triso:actorRef id="_923c3eb2-af49-42b6-9a4c-91ea2bb9ec94" predicate="consulted">_b77fe2ca-5538-4c04-95c1-16bd7d7a4388</triso:actorRef>
+                    <triso:actorRef id="_b90ab450-6a88-4b1f-8fed-563a6cdb7936" predicate="consulted">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_2fc0e462-ea9e-49eb-9190-c3d3a5678855</semantic:incoming>
             <semantic:outgoing>_1b8e28eb-7dbb-4bb1-be98-a8cc6252ae7c</semantic:outgoing>
         </semantic:serviceTask>
         <semantic:serviceTask id="_38bf7e9e-6640-4df5-89f8-c739672d1882" name="Post appointment selection for interview in applicant account and notify applicant" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The system records a selection of appointments for the interview in the online applicant account and notifies the applicant.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_c4a4e4f5-e6c7-432b-ab09-139fb745d57d" predicate="where">_44a8d1ad-cfd4-404e-89d8-09d078fd9691</triso:systemRef>
+                    <triso:actorRef id="_9ff9a09c-4fb6-47d3-8e42-a6135fe41fb7" predicate="informed">_0c9f8b93-e2a4-4a2c-9c8c-2bed22c26296</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_138630d8-52c6-4c57-9725-30c7d6cfc828</semantic:incoming>
-            <semantic:incoming>_8db85a52-9d96-444c-a655-a1d5ffe83d36</semantic:incoming>
+            <semantic:incoming>_83549564-acf6-4b59-b850-2be00af1cfcd</semantic:incoming>
             <semantic:outgoing>_6da17418-0c87-4d80-a71e-874523ff921b</semantic:outgoing>
         </semantic:serviceTask>
         <semantic:sendTask id="_721df23b-6fcb-48a3-8a7d-6f2e652de17c" name="Forward appointment and application documents to the specialist department" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The appointment for the personal interview with the applicant and his documents have to be communicated to the specialist department (Hiring Manager).&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:actorRef id="_6b513c4b-0df6-4dd8-ae87-a754caf43362" predicate="informed">_a083246b-f6f3-415e-81e4-ea87c861d70d</triso:actorRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_6da17418-0c87-4d80-a71e-874523ff921b</semantic:incoming>
             <semantic:outgoing>_0c0dec91-7d2f-4cd7-b70e-e66fde60a883</semantic:outgoing>
         </semantic:sendTask>
@@ -151,10 +274,13 @@
         <semantic:sequenceFlow id="_2fc0e462-ea9e-49eb-9190-c3d3a5678855" name="Yes" sourceRef="_421c97fc-6a93-4e62-9ce3-b94b823f5e80" targetRef="_f4cfe043-8b15-4663-b527-aba3c620600c"/>
         <semantic:sequenceFlow id="_1b8e28eb-7dbb-4bb1-be98-a8cc6252ae7c" sourceRef="_f4cfe043-8b15-4663-b527-aba3c620600c" targetRef="_14c55a56-0e1f-4a1c-bd42-d225443f77c1"/>
         <semantic:sequenceFlow id="_138630d8-52c6-4c57-9725-30c7d6cfc828" name="No" sourceRef="_421c97fc-6a93-4e62-9ce3-b94b823f5e80" targetRef="_38bf7e9e-6640-4df5-89f8-c739672d1882"/>
-        <semantic:sequenceFlow id="_8db85a52-9d96-444c-a655-a1d5ffe83d36" sourceRef="_14c55a56-0e1f-4a1c-bd42-d225443f77c1" targetRef="_38bf7e9e-6640-4df5-89f8-c739672d1882"/>
+        <semantic:sequenceFlow id="_8db85a52-9d96-444c-a655-a1d5ffe83d36" sourceRef="_14c55a56-0e1f-4a1c-bd42-d225443f77c1" targetRef="_626c03fe-c62a-4d1e-882e-5b23ee37ea18"/>
         <semantic:sequenceFlow id="_6da17418-0c87-4d80-a71e-874523ff921b" sourceRef="_38bf7e9e-6640-4df5-89f8-c739672d1882" targetRef="_721df23b-6fcb-48a3-8a7d-6f2e652de17c"/>
         <semantic:sequenceFlow id="_0c0dec91-7d2f-4cd7-b70e-e66fde60a883" sourceRef="_721df23b-6fcb-48a3-8a7d-6f2e652de17c" targetRef="_dc62ff7e-2668-4495-9e6c-91a821cb5de4"/>
         <semantic:sequenceFlow id="_dc7c0cf9-7d67-43ea-9d37-8d6ef86bcc2f" sourceRef="_a6c5b351-2dd2-4802-9a70-b6823a567d52" targetRef="_1171dbf1-d178-4b8b-92aa-f53b5c14fed3"/>
+        <semantic:sequenceFlow id="_83549564-acf6-4b59-b850-2be00af1cfcd" name="Yes" sourceRef="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" targetRef="_38bf7e9e-6640-4df5-89f8-c739672d1882"/>
+        <semantic:sequenceFlow id="_3edd1e52-e170-405f-8ee1-d5deff86f4c3" sourceRef="_a01bffc3-e6c4-49d1-bd5a-97222a17ee0b" targetRef="_95ba3b44-a120-4c33-ad02-6c2e1f8c35a7"/>
+        <semantic:sequenceFlow id="_a245aa14-be45-45c9-90bd-e867e8d34447" name="No" sourceRef="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" targetRef="_a01bffc3-e6c4-49d1-bd5a-97222a17ee0b"/>
     </semantic:process>
     <bpmndi:BPMNDiagram id="_2c450ddd-441f-4394-a2b9-1accf9a5ded2" name="Online candidate application">
         <bpmndi:BPMNPlane bpmnElement="_05cb29d9-ea4b-4a97-9c89-05f664301999" id="_2c450ddd-441f-4394-a2b9-1accf9a5ded2_plane" trisobpmn:diagramWidth="2710.367965698242" trisobpmn:diagramHeight="1241.2439027130604">
@@ -248,6 +374,24 @@
                 <dc:Bounds x="2124.7943725585938" y="757.0121945738792" width="96" height="76"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
                     <dc:Bounds height="26" width="89" x="2128.2943725585938" y="782.0121945738792"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="_d4d4206f-ecfa-4eba-aa53-becdead32bea" bpmnElement="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" isMarkerVisible="false" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="1009.5735530227998" y="931.01215757878" width="41.57359313964844" height="40.024389147758484"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
+                    <dc:Bounds height="12.25" width="105.140625" x="978.0032405227998" y="977.8111477092045"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="_d99dbfb2-2f69-45dc-a3b6-d4e46b26c838" bpmnElement="_95ba3b44-a120-4c33-ad02-6c2e1f8c35a7" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="1311.3603447929881" y="933.0243530661124" width="36" height="36"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
+                    <dc:Bounds height="26.46875" width="110" x="1274.3603447929881" y="979.0243530661124"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="_64036efb-3a88-4e4b-8487-87ae634020b9" bpmnElement="_a01bffc3-e6c4-49d1-bd5a-97222a17ee0b" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="1130.3603447929881" y="908.0243530661124" width="126" height="86"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
+                    <dc:Bounds height="40.671875" width="119" x="1133.8603447929881" y="930.6884155661124"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_f836d7b0-2da1-4283-b667-b136f7eb4062" bpmnElement="_4e470f7d-6a37-4f02-a4d9-631377f032ed" isHorizontal="true" color:background-color="#ffffff" color:border-color="#000000">
@@ -443,8 +587,7 @@
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="_cb540752-2748-4207-8bd7-33eec9b5c0a1" color:border-color="#000000" bpmnElement="_8db85a52-9d96-444c-a655-a1d5ffe83d36">
                 <di:waypoint x="953.6471862792969" y="951.0243891477585"/>
-                <di:waypoint x="1030.3603897094727" y="951.0243891477585"/>
-                <di:waypoint x="1030.3603897094727" y="509.5"/>
+                <di:waypoint x="1009.5735530227998" y="950.8111477092045"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="_a49aa396-bf39-4416-85ae-643b7804f4e5" color:border-color="#000000" bpmnElement="_6da17418-0c87-4d80-a71e-874523ff921b">
@@ -465,9 +608,49 @@
                 <di:waypoint x="2172.7943725585938" y="833.0121945738792"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="_13da2e26-36e0-4670-b324-9c2745a0836a" color:border-color="#000000" bpmnElement="_83549564-acf6-4b59-b850-2be00af1cfcd">
+                <di:waypoint x="1030.5735530227998" y="931.01215757878"/>
+                <di:waypoint x="1030.3603897094727" y="509.5"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:labelPosition="custom" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
+                    <dc:Bounds height="12.234375" width="19.125" x="1038.6822484374886" y="899.7005163020353"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="_1f2d7667-ed7c-49b7-81e7-bcd68aafae50" color:border-color="#000000" bpmnElement="_3edd1e52-e170-405f-8ee1-d5deff86f4c3">
+                <di:waypoint x="1255.0478447929881" y="951.0243530661124"/>
+                <di:waypoint x="1311.3603447929881" y="951.0243530661124"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="_7f026f6d-f7e9-4910-8367-cac24d4802be" color:border-color="#000000" bpmnElement="_a245aa14-be45-45c9-90bd-e867e8d34447">
+                <di:waypoint x="1051.1471461624483" y="950.8111477092045"/>
+                <di:waypoint x="1130.3603447929881" y="951.0243530661124"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" triso:labelPosition="midbottom" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
+                    <dc:Bounds height="12.234375" width="14.625" x="1083.4412454777182" y="955.9177503876585"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
         <bpmndi:BPMNLabelStyle id="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
             <dc:Font name="arial,helvetica,sans-serif" size="11" isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false"/>
         </bpmndi:BPMNLabelStyle>
     </bpmndi:BPMNDiagram>
+    <semantic:relationship type="trisoExtension">
+        <semantic:extensionElements>
+            <triso:ProjectCharter>
+                <triso:projectDescription>&lt;p&gt;This process describes how to proceed when a candidate applies.&lt;/p&gt;</triso:projectDescription>
+                <triso:projectScope>&lt;p&gt;Aim: Company guidelines compliant recruitment of a new employee.&lt;br /&gt;Trigger: Job vacancy which has to be filled.&lt;br /&gt;Result: The applicant has gone through application process in accordance with the company guidelines and was hired by the company.&lt;/p&gt;</triso:projectScope>
+                <triso:projectGoals/>
+                <triso:projectChallenges/>
+                <triso:projectStakeholders>
+                    <triso:responsible/>
+                    <triso:accountable/>
+                    <triso:consulted/>
+                    <triso:informed/>
+                </triso:projectStakeholders>
+            </triso:ProjectCharter>
+            <triso:graphObjects>
+                <triso:system name="Recruiting System" id="_44a8d1ad-cfd4-404e-89d8-09d078fd9691"/>
+            </triso:graphObjects>
+        </semantic:extensionElements>
+        <semantic:source>_fede5143-9714-437f-a16c-ec9b2714a70b</semantic:source>
+        <semantic:target>_fede5143-9714-437f-a16c-ec9b2714a70b</semantic:target>
+    </semantic:relationship>
 </semantic:definitions>

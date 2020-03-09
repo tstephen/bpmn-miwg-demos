@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<semantic:definitions xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:trisobpmn="http://www.trisotech.com/2014/triso/bpmn" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:trisofeed="http://trisotech.com/feed"               xmlns:drools="http://www.jboss.org/drools"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns="http://www.trisotech.com/definitions/_7e80c232-2bf0-46e0-b77e-29ec586a23a6" id="_7e80c232-2bf0-46e0-b77e-29ec586a23a6" targetNamespace="http://www.trisotech.com/definitions/_7e80c232-2bf0-46e0-b77e-29ec586a23a6" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" exporter="BPMN Modeler" exporterVersion="6.8.0" name="Advertise a job vacancy" trisobpmn:logoChoice="Default">
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:trisobpmn="http://www.trisotech.com/2014/triso/bpmn" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:trisofeed="http://trisotech.com/feed" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:drools="http://www.jboss.org/drools"                 xmlns="http://www.trisotech.com/definitions/_7e80c232-2bf0-46e0-b77e-29ec586a23a6" id="_7e80c232-2bf0-46e0-b77e-29ec586a23a6" targetNamespace="http://www.trisotech.com/definitions/_7e80c232-2bf0-46e0-b77e-29ec586a23a6" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" exporter="Workflow Modeler" exporterVersion="6.9.1" name="Advertise a job vacancy" trisobpmn:logoChoice="Default">
     <semantic:itemDefinition structureRef="feel:string" isCollection="false" triso:basicType="true" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="triso_string" id="_triso-default-bpmnItemDefinition-string_id"/>
+    <semantic:resource name="Hiring manager" id="_b5b6808a-be81-426c-98ae-f33f44a2f871"/>
+    <semantic:resource name="Recruiter" id="_dc7df8e9-cc60-4953-9ae5-a9ea25fd9c5b"/>
     <semantic:collaboration id="_0322c8c5-b921-44cc-9bf7-261dcb16f257">
         <semantic:participant id="_d3aa8a96-e9df-4336-9b0d-01b17e6587ad" name="EU Bank" processRef="_4a690dd7-809a-4fa9-ad63-515ac6685375"/>
     </semantic:collaboration>
@@ -10,10 +12,10 @@
             <semantic:dataOutput name="Job advertisement" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" id="_b6464e75-dd3d-45d9-84cd-861c42a3bedf">
                 <semantic:dataState name="Approved"/>
             </semantic:dataOutput>
-            <semantic:inputSet id="_ff073912-47e9-4fc8-9217-22e32231459b">
+            <semantic:inputSet id="_56306d38-4b50-4efc-8ea3-319a878a0fa9">
                 <semantic:dataInputRefs>_d08869ef-4951-4592-bb73-363cee03cb90</semantic:dataInputRefs>
             </semantic:inputSet>
-            <semantic:outputSet id="_d4d2e7e2-6e10-40e3-8277-ca749e50eb34">
+            <semantic:outputSet id="_1eb5720c-c4cf-453b-87c4-4b885a34593c">
                 <semantic:dataOutputRefs>_b6464e75-dd3d-45d9-84cd-861c42a3bedf</semantic:dataOutputRefs>
             </semantic:outputSet>
         </semantic:ioSpecification>
@@ -38,12 +40,13 @@
             <semantic:outgoing>_a4c93e8a-2b52-4367-8381-a3f78450a075</semantic:outgoing>
         </semantic:startEvent>
         <semantic:userTask id="_392c86ba-38b5-4dc9-b98d-f97ad4c2add5" name="Write job description" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;A very specific requirement to the job vacancy has to be written and forwarded to the recruitment department.&lt;/p&gt;</semantic:documentation>
             <semantic:incoming>_a4c93e8a-2b52-4367-8381-a3f78450a075</semantic:incoming>
             <semantic:outgoing>_8a27a9ee-b8e5-49d8-8b7d-41a59d74b3f3</semantic:outgoing>
             <semantic:ioSpecification>
                 <semantic:dataOutput name="Job description" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" triso:hidden="false" id="_31ca347a-7ad3-4416-9d4a-c080479329c7"/>
                 <semantic:inputSet/>
-                <semantic:outputSet id="_71b558e8-69d0-4972-8591-649ed61d3513">
+                <semantic:outputSet id="_5bf5886a-b7f4-4185-94c0-b2c11659ef26">
                     <semantic:dataOutputRefs>_31ca347a-7ad3-4416-9d4a-c080479329c7</semantic:dataOutputRefs>
                 </semantic:outputSet>
             </semantic:ioSpecification>
@@ -51,17 +54,26 @@
                 <semantic:sourceRef>_31ca347a-7ad3-4416-9d4a-c080479329c7</semantic:sourceRef>
                 <semantic:targetRef>_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd</semantic:targetRef>
             </semantic:dataOutputAssociation>
+            <semantic:performer id="_c663bd75-4868-4eb4-8829-0cbbd5ae4580">
+                <semantic:resourceRef>_b5b6808a-be81-426c-98ae-f33f44a2f871</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:userTask id="_15b00027-5049-4081-8952-fd398e8b722a" name="Approve job advertisement" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The job description edited to a job advertisement has to be checked and approved.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_b90e53a0-9483-4733-a1cf-27316061fec3" predicate="where">_b0c02ccd-0b0f-4c3c-8009-9a6af23ccaeb</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_842553bd-02e1-45f7-aed0-c78e9dba9e2b</semantic:incoming>
             <semantic:outgoing>_7b66938e-e5cb-4026-a863-1e6de6d11a79</semantic:outgoing>
             <semantic:ioSpecification>
                 <semantic:dataInput name="Job advertisement" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" id="_b02b2e9f-17f7-4663-b12c-255ee4351d42"/>
                 <semantic:dataOutput name="Job advertisement" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" triso:hidden="false" id="_e115b5bb-0dd7-444f-b5ec-20cffffef082"/>
-                <semantic:inputSet id="_5716b4bf-f10f-4657-8d6e-c6e68c8feac8">
+                <semantic:inputSet id="_6cefd1f1-5a9d-44c7-817b-daee028adeb8">
                     <semantic:dataInputRefs>_b02b2e9f-17f7-4663-b12c-255ee4351d42</semantic:dataInputRefs>
                 </semantic:inputSet>
-                <semantic:outputSet id="_6abeae39-2ec2-4756-8226-5b5707a4acb1">
+                <semantic:outputSet id="_95ec62b5-3495-410a-a548-34debf64c4e8">
                     <semantic:dataOutputRefs>_e115b5bb-0dd7-444f-b5ec-20cffffef082</semantic:dataOutputRefs>
                 </semantic:outputSet>
             </semantic:ioSpecification>
@@ -73,6 +85,9 @@
                 <semantic:sourceRef>_e115b5bb-0dd7-444f-b5ec-20cffffef082</semantic:sourceRef>
                 <semantic:targetRef>_b6464e75-dd3d-45d9-84cd-861c42a3bedf</semantic:targetRef>
             </semantic:dataOutputAssociation>
+            <semantic:performer id="_ceb60e9f-c1f4-43bc-aefd-6f346c176a6c">
+                <semantic:resourceRef>_b5b6808a-be81-426c-98ae-f33f44a2f871</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:exclusiveGateway id="_26c40c03-5d1f-46c5-81f1-ddd485868125" name="Job advertisement approved?" gatewayDirection="Diverging">
             <semantic:incoming>_7b66938e-e5cb-4026-a863-1e6de6d11a79</semantic:incoming>
@@ -81,16 +96,22 @@
         </semantic:exclusiveGateway>
         <semantic:dataObjectReference id="_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd" name="Job description" dataObjectRef="_8f2796af-2fbe-4f72-80c1-96933c38990f"/>
         <semantic:userTask id="_d3435084-f2c7-43cc-abcc-c679bc4232ac" name="Complete job advertisement" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The job description received from the specialist department has to be completed (layout, additional information etc.) to a job advertisement in accordance to the guidelines and approved by the Hiring Manager.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_2c8622ca-70fe-4f57-8bcd-5cbd8b1390b7" predicate="where">_b0c02ccd-0b0f-4c3c-8009-9a6af23ccaeb</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_8a27a9ee-b8e5-49d8-8b7d-41a59d74b3f3</semantic:incoming>
             <semantic:incoming>_d74707c7-6af3-4db7-9403-924bfdf6a7d8</semantic:incoming>
             <semantic:outgoing>_842553bd-02e1-45f7-aed0-c78e9dba9e2b</semantic:outgoing>
             <semantic:ioSpecification>
                 <semantic:dataInput name="Job description" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" id="_c083f111-3c38-4250-9594-3f25b4620db3"/>
                 <semantic:dataOutput name="Job advertisement" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false" triso:hidden="false" id="_50a31269-be15-435b-81e0-0a91b57ba10d"/>
-                <semantic:inputSet id="_caf6b419-0643-4d5d-8207-d81a8aa6ec8e">
+                <semantic:inputSet id="_c0f6aa16-b0be-45e0-b496-bcce739ef10f">
                     <semantic:dataInputRefs>_c083f111-3c38-4250-9594-3f25b4620db3</semantic:dataInputRefs>
                 </semantic:inputSet>
-                <semantic:outputSet id="_39f04526-e2bb-4810-bb18-f3fdcb668d3e">
+                <semantic:outputSet id="_0f27265a-71d3-419f-8841-80b42bb7282f">
                     <semantic:dataOutputRefs>_50a31269-be15-435b-81e0-0a91b57ba10d</semantic:dataOutputRefs>
                 </semantic:outputSet>
             </semantic:ioSpecification>
@@ -102,6 +123,9 @@
                 <semantic:sourceRef>_50a31269-be15-435b-81e0-0a91b57ba10d</semantic:sourceRef>
                 <semantic:targetRef>_bac0224d-62f1-46aa-bb4c-5371c3983ffb</semantic:targetRef>
             </semantic:dataOutputAssociation>
+            <semantic:performer id="_41c0e9b3-8ef9-4657-baab-c59b6ba1b1c4">
+                <semantic:resourceRef>_dc7df8e9-cc60-4953-9ae5-a9ea25fd9c5b</semantic:resourceRef>
+            </semantic:performer>
         </semantic:userTask>
         <semantic:parallelGateway id="_b13d6fa3-fc78-40c7-ae77-609be07493e9" gatewayDirection="Diverging">
             <semantic:incoming>_1d201a22-d500-4412-a32a-2c7e24ad4d6b</semantic:incoming>
@@ -109,23 +133,36 @@
             <semantic:outgoing>_f3187dce-c37e-4d5b-b49c-ed28965abb73</semantic:outgoing>
         </semantic:parallelGateway>
         <semantic:serviceTask id="_64eabfe9-6947-43eb-ac45-8d331745f86c" name="Publish job advertisement on homepage" implementation="##WebService">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;The approved job advertisement has to be published on the homepage.&lt;/p&gt;</semantic:documentation>
+            <semantic:extensionElements>
+                <triso:graphRelations>
+                    <triso:systemRef id="_4ee60d07-6419-4107-9da1-5551f25f2d96" predicate="where">_b0c02ccd-0b0f-4c3c-8009-9a6af23ccaeb</triso:systemRef>
+                </triso:graphRelations>
+            </semantic:extensionElements>
             <semantic:incoming>_f476667f-44f5-4fec-9414-bf70d987853f</semantic:incoming>
             <semantic:outgoing>_720cb9a3-20df-4da1-a923-5336b269c104</semantic:outgoing>
+            <semantic:performer id="_2d69e812-dd75-4405-ae41-5f64be302e5f">
+                <semantic:resourceRef>_dc7df8e9-cc60-4953-9ae5-a9ea25fd9c5b</semantic:resourceRef>
+            </semantic:performer>
         </semantic:serviceTask>
         <semantic:businessRuleTask id="_eae674ce-4d6e-48ac-819c-c79e0868e40d" name="Select 3rd party platforms for publishing" implementation="##unspecified">
+            <semantic:documentation textFormat="text/html">&lt;p&gt;3rd party career platforms have to be selected on which the job advertisement will be published.&lt;/p&gt;</semantic:documentation>
             <semantic:incoming>_f3187dce-c37e-4d5b-b49c-ed28965abb73</semantic:incoming>
             <semantic:outgoing>_64ac4473-a38f-4043-973a-69c497adc88a</semantic:outgoing>
             <semantic:ioSpecification>
-                <semantic:dataOutput name="List of selected 3rd parties" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="true" triso:hidden="false" id="_bc404d8d-497a-4a57-b610-f3ae1ed6758b"/>
+                <semantic:dataOutput name="List of selected 3rd parties" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="true" triso:hidden="false" id="_a450adf8-a041-4658-8e36-5a417fee6c2e"/>
                 <semantic:inputSet/>
-                <semantic:outputSet id="_b5f5c4d8-c899-4e47-a0d1-1abbd952f268">
-                    <semantic:dataOutputRefs>_bc404d8d-497a-4a57-b610-f3ae1ed6758b</semantic:dataOutputRefs>
+                <semantic:outputSet id="_9b736bf2-bae9-41ab-8c20-8210b9abd336">
+                    <semantic:dataOutputRefs>_a450adf8-a041-4658-8e36-5a417fee6c2e</semantic:dataOutputRefs>
                 </semantic:outputSet>
             </semantic:ioSpecification>
-            <semantic:dataOutputAssociation id="_e904a6a8-689e-4999-8b38-b14a8aa34814">
-                <semantic:sourceRef>_bc404d8d-497a-4a57-b610-f3ae1ed6758b</semantic:sourceRef>
+            <semantic:dataOutputAssociation id="_da16132d-fb6d-4d7c-b1cd-e3c211eaf37d">
+                <semantic:sourceRef>_a450adf8-a041-4658-8e36-5a417fee6c2e</semantic:sourceRef>
                 <semantic:targetRef>_c68abea8-c5b4-4aef-b1a5-1e81caec0cba</semantic:targetRef>
             </semantic:dataOutputAssociation>
+            <semantic:performer id="_867590ee-ec0c-4f56-b0f0-32e444b73079">
+                <semantic:resourceRef>_dc7df8e9-cc60-4953-9ae5-a9ea25fd9c5b</semantic:resourceRef>
+            </semantic:performer>
         </semantic:businessRuleTask>
         <semantic:parallelGateway id="_0783f019-f40c-43d6-ab40-0f1c81f8d9e7" gatewayDirection="Converging">
             <semantic:incoming>_720cb9a3-20df-4da1-a923-5336b269c104</semantic:incoming>
@@ -139,20 +176,20 @@
             <semantic:incoming>_64ac4473-a38f-4043-973a-69c497adc88a</semantic:incoming>
             <semantic:outgoing>_847352f2-ac0c-44be-9e24-f4c7f76bfe7e</semantic:outgoing>
             <semantic:ioSpecification>
-                <semantic:dataInput name="List of selected 3rd parties" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="true" id="_0804ec0c-3a8f-4364-9755-397639e96db2"/>
-                <semantic:inputSet id="_b28cb348-c020-4748-ba6d-afe42ed4e899">
-                    <semantic:dataInputRefs>_0804ec0c-3a8f-4364-9755-397639e96db2</semantic:dataInputRefs>
+                <semantic:dataInput name="List of selected 3rd parties" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="true" id="_4d02fe4c-1958-4a9a-b7b7-d29a9fb857db"/>
+                <semantic:inputSet id="_1f7897a5-4086-49a7-b0b9-bf3f2a6cf386">
+                    <semantic:dataInputRefs>_4d02fe4c-1958-4a9a-b7b7-d29a9fb857db</semantic:dataInputRefs>
                 </semantic:inputSet>
                 <semantic:outputSet/>
             </semantic:ioSpecification>
-            <semantic:dataInputAssociation id="_eca5746b-828f-467f-b390-edc7abb2c51b">
+            <semantic:dataInputAssociation id="_30040f4f-e0f8-476a-9d45-e146f048bcb5">
                 <semantic:sourceRef>_c68abea8-c5b4-4aef-b1a5-1e81caec0cba</semantic:sourceRef>
-                <semantic:targetRef>_0804ec0c-3a8f-4364-9755-397639e96db2</semantic:targetRef>
+                <semantic:targetRef>_4d02fe4c-1958-4a9a-b7b7-d29a9fb857db</semantic:targetRef>
             </semantic:dataInputAssociation>
             <semantic:multiInstanceLoopCharacteristics id="_970a7f54-893a-495e-8cbc-545fd631f626" isSequential="false"/>
         </semantic:serviceTask>
-        <semantic:dataObjectReference id="_c68abea8-c5b4-4aef-b1a5-1e81caec0cba" name="List of selected 3rd parties" dataObjectRef="_ef29e636-bdfe-4eb0-9633-7d0195a8ae3a"/>
         <semantic:dataObjectReference id="_bac0224d-62f1-46aa-bb4c-5371c3983ffb" name="Job advertisement" dataObjectRef="_f60fe1d9-58bd-462c-9d62-153e530dc79d"/>
+        <semantic:dataObjectReference id="_c68abea8-c5b4-4aef-b1a5-1e81caec0cba" name="List of selected 3rd parties" dataObjectRef="_ef29e636-bdfe-4eb0-9633-7d0195a8ae3a"/>
         <semantic:dataObject id="_ef29e636-bdfe-4eb0-9633-7d0195a8ae3a" name="List of selected 3rd parties" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="true"/>
         <semantic:dataObject id="_8f2796af-2fbe-4f72-80c1-96933c38990f" name="Job description" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false"/>
         <semantic:dataObject id="_f60fe1d9-58bd-462c-9d62-153e530dc79d" name="Job advertisement" itemSubjectRef="_triso-default-bpmnItemDefinition-string_id" isCollection="false"/>
@@ -165,7 +202,7 @@
         <semantic:sequenceFlow id="_f476667f-44f5-4fec-9414-bf70d987853f" sourceRef="_b13d6fa3-fc78-40c7-ae77-609be07493e9" targetRef="_64eabfe9-6947-43eb-ac45-8d331745f86c"/>
         <semantic:sequenceFlow id="_f3187dce-c37e-4d5b-b49c-ed28965abb73" sourceRef="_b13d6fa3-fc78-40c7-ae77-609be07493e9" targetRef="_eae674ce-4d6e-48ac-819c-c79e0868e40d"/>
         <semantic:sequenceFlow id="_720cb9a3-20df-4da1-a923-5336b269c104" sourceRef="_64eabfe9-6947-43eb-ac45-8d331745f86c" targetRef="_0783f019-f40c-43d6-ab40-0f1c81f8d9e7"/>
-        <semantic:sequenceFlow id="_64ac4473-a38f-4043-973a-69c497adc88a" sourceRef="_eae674ce-4d6e-48ac-819c-c79e0868e40d" targetRef="_a36ddf2f-23c1-46c5-86d4-bd2a0eb42535"/>
+        <semantic:sequenceFlow id="_64ac4473-a38f-4043-973a-69c497adc88a" triso:dataOutputId="_a450adf8-a041-4658-8e36-5a417fee6c2e" triso:dataInputId="_4d02fe4c-1958-4a9a-b7b7-d29a9fb857db" sourceRef="_eae674ce-4d6e-48ac-819c-c79e0868e40d" targetRef="_a36ddf2f-23c1-46c5-86d4-bd2a0eb42535"/>
         <semantic:sequenceFlow id="_c43defc5-4470-4bfe-8a8f-4d59ca6abeeb" sourceRef="_0783f019-f40c-43d6-ab40-0f1c81f8d9e7" targetRef="_c456dbcc-bbe3-4c75-b57d-9427525c0a94"/>
         <semantic:sequenceFlow id="_847352f2-ac0c-44be-9e24-f4c7f76bfe7e" sourceRef="_a36ddf2f-23c1-46c5-86d4-bd2a0eb42535" targetRef="_0783f019-f40c-43d6-ab40-0f1c81f8d9e7"/>
     </semantic:process>
@@ -207,16 +244,16 @@
                     <dc:Bounds height="26.015625" width="90.84375" x="789.578125" y="328.28679555654526"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd_di" bpmnElement="_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd" color:background-color="#ffffff" color:border-color="#000000">
-                <dc:Bounds x="334" y="167.5" width="34" height="40"/>
-                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
-                    <dc:Bounds height="12.015625" width="74" x="314" y="212.5"/>
-                </bpmndi:BPMNLabel>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_938dfdaf-0fe4-4def-b8cc-1aade8108f2e" bpmnElement="_d08869ef-4951-4592-bb73-363cee03cb90" color:background-color="#ffffff" color:border-color="#000000">
                 <dc:Bounds x="136" y="138" width="34" height="40"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
                     <dc:Bounds height="12.015625" width="66.0625" x="119.96875" y="183"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd_di" bpmnElement="_bd7b6a15-4ef8-46a9-8be9-20a5abb32abd" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="334" y="167.5" width="34" height="40"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
+                    <dc:Bounds height="12.015625" width="74" x="314" y="212.5"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_927164d8-b3df-447f-bd7f-f5786c37c279" bpmnElement="_b6464e75-dd3d-45d9-84cd-861c42a3bedf" color:background-color="#ffffff" color:border-color="#000000">
@@ -241,16 +278,22 @@
                 <dc:Bounds x="929.2132034301758" y="591.9878054261208" width="41.57359313964844" height="40.024389147758484"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="_fd4a4d27-2b4e-4f14-b7ff-f820f630a363" bpmnElement="_eae674ce-4d6e-48ac-819c-c79e0868e40d" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="990.7867965698242" y="645" width="142" height="88"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
+                    <dc:Bounds height="26" width="135" x="994.2867965698242" y="676"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_f0775e8e-8c6a-44fd-838e-0872f5f93f0f" bpmnElement="_64eabfe9-6947-43eb-ac45-8d331745f86c" color:background-color="#ffffff" color:border-color="#000000">
                 <dc:Bounds x="1077.7867965698242" y="492" width="119" height="81"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
                     <dc:Bounds height="40" width="112" x="1081.2867965698242" y="512.5"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_fd4a4d27-2b4e-4f14-b7ff-f820f630a363" bpmnElement="_eae674ce-4d6e-48ac-819c-c79e0868e40d" color:background-color="#ffffff" color:border-color="#000000">
-                <dc:Bounds x="990.7867965698242" y="645" width="142" height="88"/>
+            <bpmndi:BPMNShape id="_bc8f619b-ffc6-41ad-90c0-56dada9790d4" bpmnElement="_a36ddf2f-23c1-46c5-86d4-bd2a0eb42535" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="1184" y="647.5" width="129" height="83"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
-                    <dc:Bounds height="26" width="135" x="994.2867965698242" y="676"/>
+                    <dc:Bounds height="26" width="122" x="1187.5" y="676"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_4a654e20-8f3e-4e42-bb84-56d1caf793d0" bpmnElement="_0783f019-f40c-43d6-ab40-0f1c81f8d9e7" color:background-color="#ffffff" color:border-color="#000000">
@@ -263,22 +306,16 @@
                     <dc:Bounds height="12.015625" width="114.96875" x="1412.8760147094727" y="640"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_bc8f619b-ffc6-41ad-90c0-56dada9790d4" bpmnElement="_a36ddf2f-23c1-46c5-86d4-bd2a0eb42535" color:background-color="#ffffff" color:border-color="#000000">
-                <dc:Bounds x="1184" y="647.5" width="129" height="83"/>
+            <bpmndi:BPMNShape id="_bac0224d-62f1-46aa-bb4c-5371c3983ffb_di" bpmnElement="_bac0224d-62f1-46aa-bb4c-5371c3983ffb" color:background-color="#ffffff" color:border-color="#000000">
+                <dc:Bounds x="551" y="709" width="34" height="40"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
-                    <dc:Bounds height="26" width="122" x="1187.5" y="676"/>
+                    <dc:Bounds height="12.015625" width="90.84375" x="522.578125" y="754"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="_c68abea8-c5b4-4aef-b1a5-1e81caec0cba_di" bpmnElement="_c68abea8-c5b4-4aef-b1a5-1e81caec0cba" color:background-color="#ffffff" color:border-color="#000000">
                 <dc:Bounds x="1144.5" y="784" width="34" height="40"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
                     <dc:Bounds height="26.015625" width="92.34375" x="1115.328125" y="829"/>
-                </bpmndi:BPMNLabel>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_bac0224d-62f1-46aa-bb4c-5371c3983ffb_di" bpmnElement="_bac0224d-62f1-46aa-bb4c-5371c3983ffb" color:background-color="#ffffff" color:border-color="#000000">
-                <dc:Bounds x="551" y="709" width="34" height="40"/>
-                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0">
-                    <dc:Bounds height="12.015625" width="90.84375" x="522.578125" y="754"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge id="_19374b5c-d456-43e2-bc4e-3f3553583ab4" color:border-color="#000000" bpmnElement="_a4c93e8a-2b52-4367-8381-a3f78450a075">
@@ -358,9 +395,9 @@
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="_2c83f3bd-d6be-4b2e-bfba-63d51d663845" color:border-color="#000000" sourceElement="_d481109d-4c89-406f-af68-5fda941707f9" targetElement="_c68abea8-c5b4-4aef-b1a5-1e81caec0cba_di">
-                <di:waypoint x="1162.9375000000002" y="690"/>
+                <di:waypoint x="1166.5970009136947" y="690"/>
                 <di:waypoint x="1161.5" y="784"/>
-                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" triso:labelPosition="midbottom" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0"/>
+                <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_9786170f-6612-400e-a37d-2970ab70f1f3_0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="_e8b6f60a-4389-4b71-9d2e-c73bcca8ffda" color:border-color="#000000" bpmnElement="_e2734375-2aa0-418c-9f0b-8c2ca1022285" sourceElement="_8ce3cd47-c554-4454-80c4-7e045d45a7cc">
                 <di:waypoint x="298" y="264.5"/>
@@ -397,4 +434,25 @@
             <dc:Font name="arial,helvetica,sans-serif" size="11" isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false"/>
         </bpmndi:BPMNLabelStyle>
     </bpmndi:BPMNDiagram>
+    <semantic:relationship type="trisoExtension">
+        <semantic:extensionElements>
+            <triso:ProjectCharter>
+                <triso:projectDescription>&lt;p&gt;In this process, all activities are described how to advertise a job vacancy.&lt;/p&gt;</triso:projectDescription>
+                <triso:projectScope>&lt;p&gt;Aim: Advertisement of a job vacancy conformable to law and company guidelines.&lt;br /&gt;Trigger: Personnel requirements for filling job vacancies.&lt;br /&gt;Result:The advertisement for the job vacancy has been reviewed and published according to the guidelines&lt;/p&gt;</triso:projectScope>
+                <triso:projectGoals/>
+                <triso:projectChallenges/>
+                <triso:projectStakeholders>
+                    <triso:responsible/>
+                    <triso:accountable/>
+                    <triso:consulted/>
+                    <triso:informed/>
+                </triso:projectStakeholders>
+            </triso:ProjectCharter>
+            <triso:graphObjects>
+                <triso:system name="Online Recruiting System" id="_b0c02ccd-0b0f-4c3c-8009-9a6af23ccaeb"/>
+            </triso:graphObjects>
+        </semantic:extensionElements>
+        <semantic:source>_7e80c232-2bf0-46e0-b77e-29ec586a23a6</semantic:source>
+        <semantic:target>_7e80c232-2bf0-46e0-b77e-29ec586a23a6</semantic:target>
+    </semantic:relationship>
 </semantic:definitions>
