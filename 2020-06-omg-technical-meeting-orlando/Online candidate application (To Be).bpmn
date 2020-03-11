@@ -340,7 +340,7 @@
                     <dc:Bounds height="40" width="89" x="1972.081169128418" y="1014.5"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_f6d19b7c-4a77-4f07-b805-8bb659fad27d" bpmnElement="_9f02a71b-0261-4f79-bb8d-a021202b664e" isMarkerVisible="false" color:background-color="#ffffff" color:border-color="#000000">
+            <bpmndi:BPMNShape id="_f6d19b7c-4a77-4f07-b805-8bb659fad27d" bpmnElement="_9f02a71b-0261-4f79-bb8d-a021202b664e" isMarkerVisible="true" color:background-color="#ffffff" color:border-color="#000000">
                 <dc:Bounds x="2306.7943725585938" y="775" width="41.57359313964844" height="40.024389147758484"/>
                 <bpmndi:BPMNLabel color:color="#000000" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
                     <dc:Bounds height="54.015625" width="110" x="2270.581169128418" y="704.0292669773102"/>
@@ -376,7 +376,7 @@
                     <dc:Bounds height="26" width="89" x="2128.2943725585938" y="782.0121945738792"/>
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="_d4d4206f-ecfa-4eba-aa53-becdead32bea" bpmnElement="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" isMarkerVisible="false" color:background-color="#ffffff" color:border-color="#000000">
+            <bpmndi:BPMNShape id="_d4d4206f-ecfa-4eba-aa53-becdead32bea" bpmnElement="_626c03fe-c62a-4d1e-882e-5b23ee37ea18" isMarkerVisible="true" color:background-color="#ffffff" color:border-color="#000000">
                 <dc:Bounds x="1009.5735530227998" y="931.01215757878" width="41.57359313964844" height="40.024389147758484"/>
                 <bpmndi:BPMNLabel color:color="#000000" triso:defaultBounds="true" labelStyle="LS_2c450ddd-441f-4394-a2b9-1accf9a5ded2_0">
                     <dc:Bounds height="12.25" width="105.140625" x="978.0032405227998" y="977.8111477092045"/>
