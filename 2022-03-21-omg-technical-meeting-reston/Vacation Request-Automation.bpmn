@@ -3,7 +3,7 @@
   <semantic:import importType="https://www.omg.org/spec/DMN/20191111/MODEL/" location="Vacation Approval.dmn" namespace="http://www.trisotech.com/definitions/_195db244-42dd-4beb-ac9e-cc8a9b2b8643"/>
   <semantic:itemDefinition id="_triso-default-bpmnItemDefinition-string_id" structureRef="feel:string" triso:basicType="true" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="triso_string"/>
   <semantic:itemDefinition id="_24ce0503-1c7a-41eb-bbfd-28f533e0268f" structureRef="feel:number" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="Item Definition Number"/>
-  <semantic:itemDefinition id="_7d2aae2a-a2b3-4927-8865-154dcb88e7f1" structureRef="feel:dateTime" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="Item Definition Date and time"/>
+  <semantic:itemDefinition id="_7d2aae2a-a2b3-4927-8865-154dcb88e7f1" structureRef="feel:date" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType" triso:name="Item Definition Date"/>
   <semantic:itemDefinition id="_e9f96a27-1ff4-4bc0-a846-9c244d08cae7" structureRef="feel:number" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType"/>
   <semantic:itemDefinition id="_bb207a19-f088-40e0-8f0a-f151c8002cf5" structureRef="feel:string" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType"/>
   <semantic:itemDefinition id="_356dbbe9-8dcf-436a-a5c9-26d618dd4b5a" structureRef="feel:string" triso:basicType="false" triso:definitionType="http://www.trisotech.com/2015/triso/modeling/ItemDefinitionType"/>
@@ -67,9 +67,6 @@
     <semantic:extensionElements>
       <openapi:parameter name="employeeId" itemRef="_24ce0503-1c7a-41eb-bbfd-28f533e0268f" in="path" style="application/json" required="true" explode="false" id="_d3fd24ba-3943-4f3f-bcf6-a407c3cc02d4"/>
     </semantic:extensionElements>
-  </semantic:message>
-  <semantic:message id="_c2a6194f-4702-4b0a-88de-a3d41673ef93" name="Vacation Request Received" itemRef="_8a28ca0b-0650-47a2-a1d1-a1c1b72a0997">
-    <semantic:extensionElements/>
   </semantic:message>
   <semantic:interface id="_7df3e21f-23aa-455b-9851-de1fa89499c4" name="Email System" openapi:server="des://internal">
     <semantic:operation id="_83f1c680-7e06-4a9a-9206-396ed8155a71" name="Send Email (mock)" openapi:method="POST" triso:operation="true" openapi:path="/Do Nothing">
@@ -189,11 +186,6 @@
             <CountCritical xmlns="http://www.boc-group.com">true</CountCritical>
 		</semantic:extensionElements>
 	  <semantic:outgoing>_b02b5bfa-5629-4af5-b1bc-ac2a86d88adb</semantic:outgoing>
-      <semantic:dataOutput id="_736acf07-2d4e-4f7b-98d0-980a8dabcf6c_data" itemSubjectRef="_8a28ca0b-0650-47a2-a1d1-a1c1b72a0997" name="Vacation Request Received" triso:hidden="false" triso:itemType="message" triso:itemRef="_c2a6194f-4702-4b0a-88de-a3d41673ef93"/>
-      <semantic:outputSet id="_eae5e1ca-a505-4f51-85b1-7607f400d14a">
-        <semantic:dataOutputRefs>_736acf07-2d4e-4f7b-98d0-980a8dabcf6c_data</semantic:dataOutputRefs>
-      </semantic:outputSet>
-      <semantic:messageEventDefinition id="_736acf07-2d4e-4f7b-98d0-980a8dabcf6c" messageRef="_c2a6194f-4702-4b0a-88de-a3d41673ef93"/>
     </semantic:startEvent>
     <semantic:serviceTask id="_2b960d84-feb1-46a9-a1a1-c300dd996b99" name="Fetch Vacation Information" implementation="kp:http" operationRef="_dd434d56-40a4-4d63-8a22-58d8e5a5edc7">
       <semantic:extensionElements>
@@ -295,13 +287,13 @@
               </ns1:literalExpression>
             </ns1:contextEntry>
             <ns1:contextEntry>
-              <ns1:variable id="_6273c7e0-1782-4ce2-9bad-0530fa4dd593" name="From" triso:dataInputRef="_06570edb-e883-409d-a645-4392e91f5cdd" typeRef="feel:dateTime"/>
+              <ns1:variable id="_6273c7e0-1782-4ce2-9bad-0530fa4dd593" name="From" triso:dataInputRef="_06570edb-e883-409d-a645-4392e91f5cdd" typeRef="feel:date"/>
               <ns1:literalExpression id="_99b9ba0e-bb33-438e-991c-8e2e5455eb6f" expressionLanguage="https://www.omg.org/spec/DMN/20191111/FEEL/">
                 <ns1:text>From</ns1:text>
               </ns1:literalExpression>
             </ns1:contextEntry>
             <ns1:contextEntry>
-              <ns1:variable id="_b678272b-b5c4-481a-86ab-6204c72089ac" name="To" triso:dataInputRef="_efb47006-64e5-42cd-beb2-af36354e3875" typeRef="feel:dateTime"/>
+              <ns1:variable id="_b678272b-b5c4-481a-86ab-6204c72089ac" name="To" triso:dataInputRef="_efb47006-64e5-42cd-beb2-af36354e3875" typeRef="feel:date"/>
               <ns1:literalExpression id="_8868e304-cbc4-48ae-b8a9-85ff9ece2773" expressionLanguage="https://www.omg.org/spec/DMN/20191111/FEEL/">
                 <ns1:text>To</ns1:text>
               </ns1:literalExpression>
@@ -487,7 +479,7 @@ Your BOC Adonis Process Automation</MailBody>
               </ns1:literalExpression>
             </ns1:contextEntry>
             <ns1:contextEntry>
-              <ns1:variable id="_4173880b-a3ae-41e9-8831-df027a1e4093" name="From" triso:dataInputRef="_40d4e009-34a4-401c-a8f7-acb2c6477e46" typeRef="feel:dateTime"/>
+              <ns1:variable id="_4173880b-a3ae-41e9-8831-df027a1e4093" name="From" triso:dataInputRef="_40d4e009-34a4-401c-a8f7-acb2c6477e46" typeRef="feel:date"/>
               <ns1:literalExpression id="_9bed9309-d5e1-4588-b386-0f3ce2f9f1ce" expressionLanguage="https://www.omg.org/spec/DMN/20191111/FEEL/">
                 <ns1:text>From</ns1:text>
               </ns1:literalExpression>
@@ -499,7 +491,7 @@ Your BOC Adonis Process Automation</MailBody>
               </ns1:literalExpression>
             </ns1:contextEntry>
             <ns1:contextEntry>
-              <ns1:variable id="_34ae3a88-6c59-4568-ab46-424acf554173" name="To" triso:dataInputRef="_4573edc3-bdd5-4971-af84-5b4e1a5f9fd4" typeRef="feel:dateTime"/>
+              <ns1:variable id="_34ae3a88-6c59-4568-ab46-424acf554173" name="To" triso:dataInputRef="_4573edc3-bdd5-4971-af84-5b4e1a5f9fd4" typeRef="feel:date"/>
               <ns1:literalExpression id="_e45d95b2-30b9-481d-af9e-efd1cbc66140" expressionLanguage="https://www.omg.org/spec/DMN/20191111/FEEL/">
                 <ns1:text>To</ns1:text>
               </ns1:literalExpression>
@@ -615,6 +607,10 @@ Your BOC Adonis Process Automation</MailBody>
       </semantic:ioSpecification>
       <semantic:dataInputAssociation id="_32df05cc-b9ef-417d-9eca-34c98a381182">
         <semantic:sourceRef>_775c93ab-82e5-4a62-97f0-d305eda76c92</semantic:sourceRef>
+        <semantic:targetRef>_1c26901a-059c-49ee-9458-6f9f0db67197</semantic:targetRef>
+      </semantic:dataInputAssociation>
+      <semantic:dataInputAssociation id="_d2df05cc-b9ef-417d-9eca-34c98a381183">
+        <semantic:sourceRef>_2bed4da9-f468-4fe0-a37c-ae5d4c17e323</semantic:sourceRef>
         <semantic:targetRef>_1c26901a-059c-49ee-9458-6f9f0db67197</semantic:targetRef>
       </semantic:dataInputAssociation>
       <semantic:dataInputAssociation id="_7e7c0711-6a8c-4f30-be77-85f15ea4903c">
@@ -864,7 +860,6 @@ Your BOC Adonis Process Automation</MailBody>
             </ns1:contextEntry>
           </ns1:context>
         </triso:dataInputBindings>
-        <zeebe:taskDefinition type="update" />
       </semantic:extensionElements>
       <semantic:incoming>_188d38f6-b73d-4c62-964b-affc6fe040c1</semantic:incoming>
       <semantic:outgoing>_68ef27a7-011e-4ec0-ad45-41f52093de68</semantic:outgoing>
@@ -918,7 +913,6 @@ Your BOC Adonis Process Automation</MailBody>
             </ns1:contextEntry>
           </ns1:context>
         </triso:dataInputBindings>
-        <zeebe:taskDefinition type="update" />
       </semantic:extensionElements>
       <semantic:incoming>_a5441c65-06f8-4972-8158-e6f61f904841</semantic:incoming>
       <semantic:outgoing>_81ed1b89-5a4d-4028-a245-4fd38b866b6d</semantic:outgoing>
@@ -934,6 +928,10 @@ Your BOC Adonis Process Automation</MailBody>
       </semantic:ioSpecification>
       <semantic:dataInputAssociation id="_95e48019-8c07-4005-a706-2c4b421bed60">
         <semantic:sourceRef>_103fd816-b422-420d-aec9-c28b54f620db</semantic:sourceRef>
+        <semantic:targetRef>_751edb63-a514-44c3-a7e0-7ce5c18f09ec</semantic:targetRef>
+      </semantic:dataInputAssociation>
+      <semantic:dataInputAssociation id="_3c85e650-0096-4780-b6fe-f52a9654af78">
+        <semantic:sourceRef>_775c93ab-82e5-4a62-97f0-d305eda76c92</semantic:sourceRef>
         <semantic:targetRef>_751edb63-a514-44c3-a7e0-7ce5c18f09ec</semantic:targetRef>
       </semantic:dataInputAssociation>
       <semantic:dataInputAssociation id="_6d535768-1e33-4054-bb8c-b141a0098316">
@@ -959,7 +957,7 @@ Your BOC Adonis Process Automation</MailBody>
     <semantic:sequenceFlow id="_2a5ee73c-c495-48a0-945b-3dabab28ca91" name="Refused" isImmediate="false" sourceRef="_42367c5f-d084-44ee-90c7-960d1ab02a3b" targetRef="_9ed61a6a-7cc1-4ed1-86d8-03482b0983c9"/>
     <semantic:sequenceFlow id="_130d903a-f211-4b3e-9711-9061f5978d94" isImmediate="false" sourceRef="_9ed61a6a-7cc1-4ed1-86d8-03482b0983c9" targetRef="_1688f604-5edf-4187-ad9e-18f74bfede53"/>
     <semantic:sequenceFlow id="_0a1c4f20-509f-4aeb-baf9-acc762f4fdf9" name="Manual Validation Required" isImmediate="false" sourceRef="_42367c5f-d084-44ee-90c7-960d1ab02a3b" targetRef="_79523269-7444-4b01-90e9-e23957a9d020">
-      <semantic:conditionExpression xsi:type="semantic:tFormalExpression">Vacation Approval = &quot;Manual Validation Required&quot;</semantic:conditionExpression>
+      <semantic:conditionExpression xsi:type="semantic:tFormalExpression" language="https://www.omg.org/spec/DMN/20191111/FEEL/">Vacation Approval = &quot;Manual Validation Required&quot;</semantic:conditionExpression>
     </semantic:sequenceFlow>
     <semantic:sequenceFlow id="_325973e7-0bc8-4136-b6df-be1e681d8608" name="Approved" isImmediate="false" sourceRef="_42367c5f-d084-44ee-90c7-960d1ab02a3b" targetRef="_93ec9873-edf1-4549-b052-961994ec8234">
       <semantic:conditionExpression xsi:type="semantic:tFormalExpression" language="https://www.omg.org/spec/DMN/20191111/FEEL/" triso:unparsed="false">Vacation Approval = &quot;Approved&quot;</semantic:conditionExpression>
