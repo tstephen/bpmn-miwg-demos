@@ -860,6 +860,7 @@ Your BOC Adonis Process Automation</MailBody>
             </ns1:contextEntry>
           </ns1:context>
         </triso:dataInputBindings>
+        <zeebe:taskDefinition type="update" />
       </semantic:extensionElements>
       <semantic:incoming>_188d38f6-b73d-4c62-964b-affc6fe040c1</semantic:incoming>
       <semantic:outgoing>_68ef27a7-011e-4ec0-ad45-41f52093de68</semantic:outgoing>
@@ -913,6 +914,7 @@ Your BOC Adonis Process Automation</MailBody>
             </ns1:contextEntry>
           </ns1:context>
         </triso:dataInputBindings>
+        <zeebe:taskDefinition type="update" />
       </semantic:extensionElements>
       <semantic:incoming>_a5441c65-06f8-4972-8158-e6f61f904841</semantic:incoming>
       <semantic:outgoing>_81ed1b89-5a4d-4028-a245-4fd38b866b6d</semantic:outgoing>
