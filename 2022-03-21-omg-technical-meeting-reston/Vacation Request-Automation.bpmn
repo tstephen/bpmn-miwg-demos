@@ -96,7 +96,7 @@
       <semantic:inMessageRef>_298108a4-f565-4023-b8a8-20b0d0b4345a</semantic:inMessageRef>
     </semantic:operation>
   </semantic:interface>
-  <semantic:process id="_352be920-ddc7-4757-b155-bb91bf1d4ee0" name="Vacation Request" isClosed="false" isExecutable="true">
+  <semantic:process id="VacationRequestProcess" name="Vacation Request" isClosed="false" isExecutable="true">
     <semantic:extensionElements>
       <zeebe:userTaskForm id="userTaskForm_1m306cp">{
   &quot;schemaVersion&quot;: 2,
@@ -978,7 +978,7 @@ Your BOC Adonis Process Automation</MailBody>
     <semantic:sequenceFlow id="_d79c991e-446c-47d1-ac9d-9d0113e35b93" isImmediate="false" sourceRef="_2b960d84-feb1-46a9-a1a1-c300dd996b99" targetRef="_1a818a94-ba6f-413b-a7e8-6f8fd2a11e32"/>
   </semantic:process>
   <bpmndi:BPMNDiagram id="_a9e3a63e-db87-4fa1-9091-328acae4f490" name="Vacation Request">
-    <bpmndi:BPMNPlane id="_a9e3a63e-db87-4fa1-9091-328acae4f490_plane" bpmnElement="_352be920-ddc7-4757-b155-bb91bf1d4ee0" trisobpmn:diagramWidth="2335.0145631067962" trisobpmn:diagramHeight="1180.4477492201154">
+    <bpmndi:BPMNPlane id="_a9e3a63e-db87-4fa1-9091-328acae4f490_plane" bpmnElement="VacationRequestProcess" trisobpmn:diagramWidth="2335.0145631067962" trisobpmn:diagramHeight="1180.4477492201154">
       <bpmndi:BPMNEdge id="_e58460d8-86b0-41e4-b7c3-aef425f1bfd3" bpmnElement="_d79c991e-446c-47d1-ac9d-9d0113e35b93">
         <di:waypoint x="499" y="313.2238746100577"/>
         <di:waypoint x="657.5735931396484" y="313.2238746100577"/>
