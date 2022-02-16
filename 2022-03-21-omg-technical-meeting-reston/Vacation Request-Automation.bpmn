@@ -1320,10 +1320,10 @@ Your BOC Adonis Process Automation</MailBody>
           <triso:allowedValues constraintsType="enumeration">
             <semantic:extensionElements>
               <triso:constraintDetails>
-                <triso:display>&quot;Accepted&quot;, &quot;Refused&quot;, &quot;Manual Validation Required&quot;</triso:display>
+                <triso:display>&quot;Approved&quot;, &quot;Refused&quot;, &quot;Manual Validation Required&quot;</triso:display>
                 <triso:choices>
-                  <triso:value>&quot;Accepted&quot;</triso:value>
-                  <triso:display>&quot;Accepted&quot;</triso:display>
+                  <triso:value>&quot;Approved&quot;</triso:value>
+                  <triso:display>&quot;Approved&quot;</triso:display>
                 </triso:choices>
                 <triso:choices>
                   <triso:value>&quot;Refused&quot;</triso:value>
@@ -1335,7 +1335,7 @@ Your BOC Adonis Process Automation</MailBody>
                 </triso:choices>
               </triso:constraintDetails>
             </semantic:extensionElements>
-            <triso:text>&quot;Accepted&quot;,&quot;Refused&quot;,&quot;Manual Validation Required&quot;</triso:text>
+            <triso:text>&quot;Approved&quot;,&quot;Refused&quot;,&quot;Manual Validation Required&quot;</triso:text>
           </triso:allowedValues>
         </triso:itemDefinition>
         <triso:itemDefinition name="Vacation_Approval" label="Vacation Approval" isCollection="false">
