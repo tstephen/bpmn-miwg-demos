@@ -96,6 +96,13 @@
       <semantic:inMessageRef>_298108a4-f565-4023-b8a8-20b0d0b4345a</semantic:inMessageRef>
     </semantic:operation>
   </semantic:interface>
+  <semantic:collaboration id="Collaboration_1rz14um">
+    <semantic:participant id="Participant_04dpvds" name="Vacation Request" processRef="VacationRequestProcess">
+      <semantic:extensionElements>
+            <Assignee xmlns="http://www.boc-group.com">group(owner)</Assignee>
+      </semantic:extensionElements>
+    </semantic:participant>
+  </semantic:collaboration>
   <semantic:process id="VacationRequestProcess" name="Vacation Request" isClosed="false" isExecutable="true">
     <semantic:documentation>Vacation Request - BPMN MIWG demo for 2022</semantic:documentation>
     <semantic:extensionElements>
@@ -996,7 +1003,10 @@ Your BOC Adonis Process Automation</MailBody>
     </semantic:dataObject>
   </semantic:process>
   <bpmndi:BPMNDiagram id="_a9e3a63e-db87-4fa1-9091-328acae4f490" name="Vacation Request">
-    <bpmndi:BPMNPlane id="_a9e3a63e-db87-4fa1-9091-328acae4f490_plane" bpmnElement="VacationRequestProcess" trisobpmn:diagramWidth="2335.0145631067962" trisobpmn:diagramHeight="1180.4477492201154">
+    <bpmndi:BPMNPlane id="_a9e3a63e-db87-4fa1-9091-328acae4f490_plane" bpmnElement="Collaboration_1rz14um" trisobpmn:diagramWidth="2335.0145631067962" trisobpmn:diagramHeight="1180.4477492201154">
+      <bpmndi:BPMNShape id="Participant_04dpvds_di" bpmnElement="Participant_04dpvds" isHorizontal="true">
+        <dc:Bounds x="137" y="37" width="2090" height="780" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_e58460d8-86b0-41e4-b7c3-aef425f1bfd3" bpmnElement="_d79c991e-446c-47d1-ac9d-9d0113e35b93">
         <di:waypoint x="499" y="313.2238746100577"/>
         <di:waypoint x="657.5735931396484" y="313.2238746100577"/>
