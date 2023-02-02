@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="_5SVkEIXnEeSmwfgVk-ryvQ" targetNamespace="http://camunda.org/schema/1.0/bpmn" exporter="Camunda Modeler" exporterVersion="5.6.0-nightly.20221115" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" camunda:diagramRelationId="8dc12e9b-19d8-4ead-b538-41e8a4a9b4b2">
+  <bpmn2:collaboration id="Collaboration_1u35ano">
+    <bpmn2:participant id="Participant_1obg1jw" name="Manual Check" processRef="ManualCheck" />
+  </bpmn2:collaboration>
+  <bpmn2:message id="Message_0fvpzfg" name="Message_DocumentRequested">
+    <bpmn2:extensionElements>
+      <zeebe:subscription correlationKey="= documentReferenceId" />
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:process id="ManualCheck" name="Manual Check" isExecutable="false">
+    <bpmn2:userTask id="UserTask_DecideOnApplication" name="Decide on application">
+      <bpmn2:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0khiqpl" />
+        <zeebe:ioMapping>
+          <zeebe:input source="= string join(risks, &#34;, &#34;)" target="risksText" />
+          <zeebe:input source="= applicant.age" target="age" />
+          <zeebe:input source="= applicant.name" target="applicantName" />
+        </zeebe:ioMapping>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_08vmski</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_0vjv3ik</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:endEvent id="Event_019s1qx">
+      <bpmn2:incoming>Flow_0vjv3ik</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="Event_1gvnk0w">
+      <bpmn2:outgoing>Flow_08vmski</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:subProcess id="Activity_0uvp3cb" triggeredByEvent="true">
+      <bpmn2:startEvent id="Event_0co31tl" isInterrupting="false">
+        <bpmn2:outgoing>Flow_0irfroh</bpmn2:outgoing>
+        <bpmn2:messageEventDefinition id="MessageEventDefinition_0cl167n" />
+      </bpmn2:startEvent>
+      <bpmn2:sequenceFlow id="Flow_0irfroh" sourceRef="Event_0co31tl" targetRef="CallActivity_RequestDocument" />
+      <bpmn2:endEvent id="Event_072y3gq">
+        <bpmn2:incoming>Flow_1wwxns6</bpmn2:incoming>
+      </bpmn2:endEvent>
+      <bpmn2:sequenceFlow id="Flow_1wwxns6" sourceRef="CallActivity_RequestDocument" targetRef="Event_072y3gq" />
+      <bpmn2:callActivity id="CallActivity_RequestDocument" name="Document Request">
+        <bpmn2:extensionElements>
+          <zeebe:calledElement processId="requestDocument_en" propagateAllChildVariables="true" />
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0irfroh</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_1wwxns6</bpmn2:outgoing>
+        <bpmn2:multiInstanceLoopCharacteristics />
+      </bpmn2:callActivity>
+    </bpmn2:subProcess>
+    <bpmn2:subProcess id="Activity_1esx1s7" triggeredByEvent="true">
+      <bpmn2:startEvent id="Event_1dtjypf" isInterrupting="false">
+        <bpmn2:outgoing>Flow_0kaot38</bpmn2:outgoing>
+        <bpmn2:timerEventDefinition id="TimerEventDefinition_0kdavba" />
+      </bpmn2:startEvent>
+      <bpmn2:userTask id="UserTask_AccelerateDecision" name="Accelerate decision making">
+        <bpmn2:incoming>Flow_0kaot38</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_1t18skh</bpmn2:outgoing>
+      </bpmn2:userTask>
+      <bpmn2:endEvent id="EndEvent_DecisionAccelerated" name="Decision accelerated">
+        <bpmn2:incoming>Flow_1t18skh</bpmn2:incoming>
+      </bpmn2:endEvent>
+      <bpmn2:sequenceFlow id="Flow_0kaot38" sourceRef="Event_1dtjypf" targetRef="UserTask_AccelerateDecision" />
+      <bpmn2:sequenceFlow id="Flow_1t18skh" sourceRef="UserTask_AccelerateDecision" targetRef="EndEvent_DecisionAccelerated" />
+    </bpmn2:subProcess>
+    <bpmn2:sequenceFlow id="Flow_08vmski" sourceRef="Event_1gvnk0w" targetRef="UserTask_DecideOnApplication" />
+    <bpmn2:sequenceFlow id="Flow_0vjv3ik" sourceRef="UserTask_DecideOnApplication" targetRef="Event_019s1qx" />
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1u35ano">
+      <bpmndi:BPMNShape id="Participant_1obg1jw_di" bpmnElement="Participant_1obg1jw" isHorizontal="true">
+        <dc:Bounds x="150" y="60" width="390" height="450" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1b9zsmd_di" bpmnElement="UserTask_DecideOnApplication">
+        <dc:Bounds x="296" y="90" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_019s1qx_di" bpmnElement="Event_019s1qx">
+        <dc:Bounds x="442" y="112" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1gvnk0w_di" bpmnElement="Event_1gvnk0w">
+        <dc:Bounds x="212" y="112" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0omq74z_di" bpmnElement="Activity_0uvp3cb" isExpanded="true">
+        <dc:Bounds x="200" y="200" width="314" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_08x271y_di" bpmnElement="Event_0co31tl">
+        <dc:Bounds x="220" y="242" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_072y3gq_di" bpmnElement="Event_072y3gq">
+        <dc:Bounds x="452" y="242" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1u7020p_di" bpmnElement="CallActivity_RequestDocument">
+        <dc:Bounds x="300" y="220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0irfroh_di" bpmnElement="Flow_0irfroh">
+        <di:waypoint x="256" y="260" />
+        <di:waypoint x="300" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wwxns6_di" bpmnElement="Flow_1wwxns6">
+        <di:waypoint x="400" y="260" />
+        <di:waypoint x="452" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_1q2kuce_di" bpmnElement="Activity_1esx1s7" isExpanded="true">
+        <dc:Bounds x="200" y="350" width="314" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0chptl4_di" bpmnElement="Event_1dtjypf">
+        <dc:Bounds x="226" y="392" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_UserTask_6" bpmnElement="UserTask_AccelerateDecision">
+        <dc:Bounds x="306" y="370" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_EndEvent_28" bpmnElement="EndEvent_DecisionAccelerated">
+        <dc:Bounds x="452" y="392" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="444" y="433" width="57" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0kaot38_di" bpmnElement="Flow_0kaot38">
+        <di:waypoint x="262" y="410" />
+        <di:waypoint x="306" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1t18skh_di" bpmnElement="Flow_1t18skh">
+        <di:waypoint x="406" y="410" />
+        <di:waypoint x="452" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08vmski_di" bpmnElement="Flow_08vmski">
+        <di:waypoint x="248" y="130" />
+        <di:waypoint x="296" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vjv3ik_di" bpmnElement="Flow_0vjv3ik">
+        <di:waypoint x="396" y="130" />
+        <di:waypoint x="442" y="130" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
